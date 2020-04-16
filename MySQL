@@ -71,5 +71,60 @@ show columns from 表名;
 SHOW INDEX FROM 数据表:
 
  SHOW TABLE STATUS  FROM user;
+ 
+ 
+ 4.创建数据库
+ create database runoob;
+ 
+ 5.删除数据库
+ drop database runoob;
+ 
+ 6.选择数据库
+ use runoob;
+ 
+ 四.数据类型
+ 分为三类：
+ 1）数值 INTEGER、SMALLINT、DECIMAL和NUMERIC FLOAT、REAL和DOUBLE
+ 2）时间日期 DATETIME、DATE、TIMESTAMP、TIME和YEAR
+ 3）字符串 CHAR、VARCHAR、BINARY、VARBINARY、BLOB、TEXT、ENUM和SET
+ 
+//一个汉字占多少长度与编码有关：
+UTF－8：一个汉字＝3个字节
+GBK：一个汉字＝2个字节
+
+五.操作数据表
+1.CREATE TABLE IF NOT EXISTS `runoob_tbl`(
+   `runoob_id` INT UNSIGNED AUTO_INCREMENT,
+   `runoob_title` VARCHAR(100) NOT NULL,
+   `runoob_author` VARCHAR(40) NOT NULL,
+   `submission_date` DATE,
+   PRIMARY KEY ( `runoob_id` )
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+2.DROP TABLE runoob_tbl
+
+3.插入行数据
+INSERT INTO runoob_tbl 
+(runoob_title, runoob_author, submission_date)
+VALUES("学习 PHP", "菜鸟教程", NOW());
+
+INSERT INTO runoob_tbl 
+(runoob_title, runoob_author, submission_date)
+VALUES("学习 MySQL", "菜鸟教程", NOW());
+
+INSERT INTO runoob_tbl 
+(runoob_title, runoob_author, submission_date)
+VALUES("JAVA 教程", "RUNOOB.COM", '2016-05-06');
+
+4.查询数据
+select * from runoob_tbl;
+
+5.where子句
+like 匹配/模糊匹配，会与 % 和 _ 结合使用。
+%匹配任意字符， _匹配单个字符
+
+SELECT * from runoob_tbl  WHERE runoob_author LIKE '%COM';
+
+6.update更新
 
 
