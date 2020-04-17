@@ -1,0 +1,17 @@
+1.使用git bash进行clone
+第一步：在本地文件夹空白处“右击” -> 选择“Git Bash Here” 。
+第二步：执行克隆命令：git clone xxxxxx.git
+
+2.使用git bash提交、push代码
+
+第一步：在本地项目根目录下，右键选择“git bash here”
+
+第二步：查看当前代码的修改状态，执行命令：git status
+
+第三步：将修改的文件提交到本地暂存区，执行命令：git add filename
+
+或者将所有修改过的工作文件提交暂存区，执行命令： git add .
+
+第四步：将暂存区的修改文件提交到本地git库中，执行命令：git commit后输入commit message，或者git commit -m "引号内输入commit message"
+
+第五步：将提交的修改推送到远端，执行命令：git push origin master（例子中使用的是默认的远端origin，分支master）
