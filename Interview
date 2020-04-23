@@ -1,0 +1,107 @@
+// Interview.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
+//
+
+#include <iostream>
+
+int main()
+{
+    std::cout << "Hello World!\n";
+}
+
+//1.二分查找实现
+int binary_research(int arr[], int left, int right, int element)
+{
+	while (left <= right)
+	{
+		int mid = (left + right) / 2;
+		if (arr[mid] > element)
+		{
+			right = mid - 1;
+		}
+		else if (arr[mid] < element)
+		{
+			left = mid + 1;
+		}
+		else
+		{
+			return mid;
+		}
+	}
+
+	return -1;
+}
+
+
+//2.atoi()底层实现
+#include "ctype.h"
+#include "stdlib.h"
+
+int my_atoi(char ch[])
+{
+	int i, number, sign;
+
+	for (i = 0; isspace(ch[i]); ++i);   //
+	{
+		sign = (ch[i] == '-') ? -1 : 1;
+	}
+
+	if (ch[i] == '+' || ch[i] == ' -')     //跳过符号位
+	{
+		i++;
+	}
+
+	for (number = 0; isdigit(ch[i]); ++i)
+	{
+		number = 10 * number + (ch[i] - '0');        //将数字字符转换成整形数字
+	
+
+	return sign * number;
+}
+
+//3.两个矩形最短距离实现
+	//https://blog.csdn.net/DeliaPu/article/details/104837064
+int min_distance_of_rectangles(Rect rect1, Rect rect2)
+{
+	int min_dist;
+
+	//首先计算两个矩形中心点
+	Point C1, C2;
+	C1.x = rect1.x + (rect1.width / 2);
+	C1.y = rect1.y + (rect1.height / 2);
+	C2.x = rect2.x + (rect2.width / 2);
+	C2.y = rect2.y + (rect2.height / 2);
+
+	// 分别计算两矩形中心点在X轴和Y轴方向的距离
+	int Dx, Dy;
+	Dx = abs(C2.x - C1.x);
+	Dy = abs(C2.y - C1.y);
+
+	//两矩形不相交，在X轴方向有部分重合的两个矩形，最小距离是上矩形的下边线与下矩形的上边线之间的距离
+	if ((Dx < ((rect1.width + rect2.width) / 2)) && (Dy >= ((rect1.height + rect2.height) / 2)))
+	{
+		min_dist = Dy - ((rect1.height + rect2.height) / 2);
+	}
+
+	//两矩形不相交，在Y轴方向有部分重合的两个矩形，最小距离是左矩形的右边线与右矩形的左边线之间的距离
+	else if ((Dx >= ((rect1.width + rect2.width) / 2)) && (Dy < ((rect1.height + rect2.height) / 2)))
+	{
+		min_dist = Dx - ((rect1.width + rect2.width) / 2);
+	}
+
+	//两矩形不相交，在X轴和Y轴方向无重合的两个矩形，最小距离是距离最近的两个顶点之间的距离，
+	// 利用勾股定理，很容易算出这一距离
+	else if ((Dx >= ((rect1.width + rect2.width) / 2)) && (Dy >= ((rect1.height + rect2.height) / 2)))
+	{
+		int delta_x = Dx - ((rect1.width + rect2.width) / 2);
+		int delta_y = Dy - ((rect1.height + rect2.height) / 2);
+		min_dist = sqrt(delta_x * delta_x + delta_y * delta_y);
+	}
+
+	//两矩形相交，最小距离为负值，返回-1
+	else
+	{
+		min_dist = -1;
+	}
+
+	return min_dist;
+}
