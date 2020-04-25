@@ -1,5 +1,14 @@
 makefile知识总结：
 
+Linux GCC编译警告：Clock skew detected. 错误解决办法：
+原因在于系统时间比文件修改时间早，看了下我的系统时间竟然还是2012-01-13，而今天都已经是2012-01-31呢，于是修改时间后重新编译，问题解决
+https://www.cnblogs.com/jiu0821/p/6768473.html
+
+Linux下切换root用户提示Authentication failure错误的解决方法：
+sudo passwd
+然后会让你输入当前用户密码
+输入完后再输入root用户密码就可以了（由$变成#）
+
 一、介绍
 1.使用场景：
 makefile定义了一系列的规则来指定，哪些文件需要先编译，哪些文件需要后编译，哪些文件需要重新编译，甚至于进行更复杂的功能操作，makefile带来的好处就是--“自动化编译”。
