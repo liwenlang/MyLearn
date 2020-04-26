@@ -72,7 +72,7 @@ SHOW INDEX FROM 数据表:
 
  SHOW TABLE STATUS  FROM user;
  
- 
+
  4.创建数据库
  create database runoob;
  
