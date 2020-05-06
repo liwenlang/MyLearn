@@ -1,1 +1,12 @@
+linux下使用tcpdump抓包：
+1.tcpdump拷贝至/tmp目录
+2.为tcpdump设置执行权限
+chmod +x tcpdump
+3.执行./tcpdump -i eth1 port 8080 -w playdownload.pcap
+-i 表示网卡 -w表示用文件输出。
+4.在window用Wireshark打开.pcap
 
+如何使用过滤器
+http
+ip.src == ... and ip.dst == ...
+tcp.port
