@@ -1,0 +1,704 @@
+
+5	网络通讯
+【ping命令】
+ 
+【实例 | 技巧】
+ping 192.168.0.1                   # Windows会自动终止，Linux需Ctrl+C来终止
+ping www.sohu.com               # 直接ping主机域名
+ping -c 4 -i  2 -s 1024 192.168.0.1  # ping 4次，间隔2秒，每包大小1K
+【归纳 | 总结】
+【备注一】使用ping检查连通性六个步骤：
+(1) 使用ifconfig观察本地网络设置是否正确
+(2) ping 127.0.0.1来检查本地的TCP/IP协议有没有设置好
+(3) ping本机IP地址，这样是为了检查本机的IP地址是否设置有误
+(4) ping本网网关或本网IP地址来检查硬件设备或者本地网络是否正常
+(5) ping本地DNS地址，这样做是为了检查DNS是否能够将IP正确解析。
+(6) ping远程IP地址，这主要是检查本网或本机与外部的连接是否正常
+【备注二】常见故障信息及原因分析:
+(1) No Answer: 原因可能是，对方主机没工作，双方网络配置不正确，路由问题等。 
+(2) Request Time Out: 对方主机已关机，路由问题或对端防火墙设置禁止ping 
+(3) Unknown Host Name: DNS设置问题，或者对方主机不存在 
+(4) Destination Net Unreachable: 双方没有建立连接，或对方主机不存在 
+(5) Bad IP Address: IP地址不存在或IP不能被DNS服务器解析
+【备注三】Linux下简单的禁ping的方法:
+	echo 1 > /proc/sys/net/ipv4/icmp_echo_ignore_all   # 禁止ping
+	echo 0 > /proc/sys/net/ipv4/icmp_echo_ignore_all   # 开启ping
+PS: 防止DDOS攻击，很多LINUX主机都会禁止ping，ping不通不代表连通有问题
+【备注四】ping命令在shell脚本中的使用实例:
+ 
+【wall命令】
+ 
+【实例 | 技巧】
+wall 'System will shutdown at 21:00 pm'     # 
+wall < bullet.txt                            # 用指定文本来发公告
+echo "hello, everyone!" | wall               # 也可以通过这种方式来发讯息
+wall -g root < message.txt                 # 向整个组用户发信息
+【归纳 | 总结】
+【备注一】wall命令的实现步骤:
+(1) 输入wall 回车
+(2) 输入要发送的讯息内容
+(3) 输入Ctrl+D结束发送
+PS: 如果你正在终端编辑一个文件，那么消息会直接插入到编辑文件中!
+【备注二】wall命令发送信息示例:
+	pts/1这个终端发的信息: (Ctrl+D结束发送)
+ 
+	pts/2终端的用户接收到的信息:
+ 
+【总结一】write, wall, talk区别:
+[共同点]:
+(1) 三者均为Linux自带的聊天通讯工具. 
+(2) 都需要mesg设置为y模式方允许通讯
+(3) 通常都需要用who -T命令来查看当前在线用户情况
+[不同点]:
+(1) write是一对一单向通讯，用于向已登录系统的某个用户发送信息
+(2) wall是一对多单向通讯， wall使用的广播包，不可回复
+(3) talk是一对一双向通讯，Linux真正意思上的聊天工具，目前阵列没有该工具
+【mesg命令】
+ 
+【实例 | 技巧】
+mesg          # 查询当前终端机的写入设置
+mesg y       # 设置终端机可写设置
+mesg n       # 设置终端为不可写
+【归纳 | 总结】
+ 
+
+【talk命令】
+ 
+【实例 | 技巧】
+【场景一】登录在同台服务器上的两个用户
+$ talk Jerry       # 聊天对象
+Hi, Tom!         # 聊天内容 
+Ctrl+C           # 结束聊天   
+$ talk Tom   
+【场景二】登录在不同服务器上的两个用户
+$ talk Jerry@mouse.com  pts/2
+$ talk Tom@cat.com      pts/1
+【netstat命令】
+ 
+【实例 | 技巧】
+netstat -a                                 # 列出所有的端口
+netstat -at                                # 列出所有tcp端口
+netstat -s                                 # 显示网络统计信息
+netstat -lt                                # 显示监听的tcp的端口
+netstat -n                                # 显示所有已建立的有效链接
+netstat -ie                               # 等同于ifconfig
+netstat -apu                             # 显示UDP端口的使用情况
+netstat -nat | grep ESTABLISHED | wc -l   # 当前并发的连接数
+netstat -atulnp | grep mysql             # 查找mysql的端口号
+netstat -lx                              # 列出所有处于监听状态的unix 端口
+netstat -anpt | grep ':80'                 # 找出运行在指定端口的进程
+netstat -ap | grep ssh                    # 找出程序运行的端口
+netstat -nat | grep -i "80" | wc -l          # 查看80端口的连接数
+netstat -n | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}' # 查看并发请求数及其TCP连接
+netstat -np | grep SYN_REC | sort –u   # 列出所有包含的IP地址而不仅仅是计数
+【归纳 | 总结】
+【备注一】netstat常用的几个观察点:
+(1) SYN-SENT：再发送连接请求后等待匹配的连接请求（如果有大量这样的状态包，检查是否中招了）
+(2) SYN-RECEIVED：再收到和发送一个连接请求后等待对方对连接请求的确认（如有大量此状态，估计被flood攻击了）
+(3) LAST-ACK：等待原来的发向远程TCP的连接中断请求的确认（此项出现，检查是否被攻击）
+(4) 对Apache的并发请求数，php或java的进程数(由此来判断系统是否超载，需不需要添加服务)
+【ifconfig命令】
+ 
+【实例 | 技巧】
+【启动关闭网卡】
+ifconfig eth0 up                                  # 启动网卡eth0 
+ifconfig eth0 down                               # 关闭网卡eth0
+【网卡配置和删除IPv6地址】
+ifconfig eth0 add 33ffe:3240:800:1005::2/64        # 为网卡eth0配置IPv6地址
+ifconfig eth0 add 33ffe:3240:800:1005::2/64        # 为网卡eth0删除IPv6地址
+ifconfig eth0 hw ether 00:AA:BB:CC:DD:EE          # 用ifconfig修改MAC地址
+【配置IP地址】
+ifconfig eth0 192.168.120.56                        # 为网卡eth0配置IP地址:192.168.120.56
+ifconfig eth0 192.168.120.56 netmask 255.255.255.0  # 配IP，并加上子掩码
+ifconfig eth0 192.168.120.56 netmask 255.255.255.0 broadcast 192.168.120.255 # 再加广播包
+【启用和关闭ARP协议】
+ifconfig eth0 arp                                   # 开启网卡eth0的arp协议
+ifconfig eth0 -arp                                  # 关闭网卡eth0的arp协议
+【设置最大传输单元】
+ifconfig eth0 mtu 1500                          # 设置能通过的最大数据包大小为1500 bytes
+【归纳 | 总结】
+【备注一】显示网络设备信息说明:
+ 
+Linux下网卡命名规律：eth0，eth1。第一块以太网卡, eth1第二块，依次类推
+lo为环回接口，它的IP地址固定为127.0.0.1，掩码8位。它代表你的机器本身
+第一行：连接类型：Ethernet（以太网）HWaddr（硬件mac地址）
+第二行：网卡的IP地址、子网、掩码
+第三行：UP（代表网卡开启状态）
+RUNNING（代表网卡的网线被接上）
+MULTICAST（支持组播）
+MTU:1500（最大传输单元）：1500字节
+第四、五行：接收、发送数据包情况统计
+第七行：接收、发送数据字节数统计信息
+【备注二】关于ifconfig命令的几点说明:
+(1) 用ifconfig命令配置的网卡信息，在网卡重启后机器重启后，配置就不存在
+(2) service network {start | stop | restart}, 重启network会恢复到原IP
+(3) 要想长久生效，需要修改配置文件;在RHEL系统中，一般在/etc/sysconfig/network-scripts/ifcfg-eth[0-9]
+下面图说明了如何设置该文件: 
+ 
+备注: 上面的只是Linux服务器上修改网卡IP，如果是阵列的话，可以通过下面两种方式来修改:
+	方式一:  CLI模式下执行change system management命令来修改
+	方式二:  DEBUG模式下，在/OSM/script命令os_change*ip.sh来修改
+
+
+6	系统管理
+【useradd命令】
+ 
+【实例 | 技巧】
+useradd Jerry                             # 创建用户Jerry,默认/home/Jerry,/bin/bash
+useradd Jerry -s /sbin/nologin              # 创建用户Jerry，但不能登录系统
+useradd Jerry -u 888                       # 指定UID为888
+useradd -d /usr/Jerry Jerry                   # 指定用户家目录/usr/Jerry
+useradd -c "This is test account" Jerry        # 加注释，方便管理员管理
+useradd -e 2016-06-06 Jerry                 # 将该用户的有效期2016-06-06，逾期不能登录
+useradd -u 1103  -f 7 Jerry                  # 密码无效后，宽限7天
+useradd -s /bin/sh -g root –G admin,test  Jerry     # 用户Jerry,主组root,附加组admin,test
+【归纳 | 总结】
+【备注一】几个跟账号相关的命令:
+	用useradd创建用户帐号
+	用userdel来删除账号
+	用usermod来修改用户账号
+	用passwd设定帐号的密码
+【userdel命令】
+ 
+【实例 | 技巧】
+userdel Jerry        # 仅删除用户账号Jerry
+userdel -r Jerry      # 删除用户账号及相关文件，比如家目录/home/Jerry
+【归纳 | 总结】
+【备注一】关于userdel命令的几点说明:
+(1) 跟账号相关的几个文件:/etc/passwd; /etc/shadow; /etc/group
+(2) 执行-r参数会将用户家目录一并删除，所以删除前最好先备份
+(3) find / -nouser -exec rm - rf {} \;可用来删除无主家目录
+【usermod命令】
+ 
+【实例 | 技巧】
+usermod -u 777 Jerry                               # 更改UID
+usermod -l Tom Jerry                               # 将Jerry该为Tom
+usermod -L Jerry                                   # 锁定账号Jerry
+usermod -U Jerry                                   # 解锁账号Jerry
+usermod -G root Jerry                              # 将Jerry用户添加到root用户组
+usermod -s /bin/ksh -d /usr/tom –g developer tom  # 更改家目录及shell
+【date命令】
+ 
+【实例 | 技巧】
+【设定并显示时间】
+date --date 08:42:00  
+date '+%c' --date 08:45:00
+date –set="20151225 09:17:00”
+【显示时间】
+date              # 输出: Wed Dec 9 10:00:00 CST 2015
+date '+%c'        # 输出: Wed Dec 9 10:00:00 2015
+date -I            # 输出: 2015-12-09
+date '+%D'       # 输出: 12/09/15
+date '+%x'        # 输出: 12/09/15
+date '+%T'        # 输出: 10:00:00
+date '+%X'        # 输出: 10:00:00
+date '+%T%n%D'   # 显示时间后跳行，再显示目前日期
+date '+%B %d'      # December 09
+date -d 'dec 9 -2 weeks'    # 相比12月9日两周前的时间
+date -u                    # 以UTC形式显示日期和时间
+【加减操作】
+date +%Y%m%d                # 显示前天年月日 
+date -d "+1 day" +%Y%m%d    # 显示前一天的日期 
+date -d "-1 day" +%Y%m%d     # 显示后一天的日期 
+date -d "-1 month" +%Y%m%d  # 显示上一月的日期 
+date -d "+1 month" +%Y%m%d  # 显示下一月的日期 
+date -d "-1 year" +%Y%m%d     # 显示前一年的日期 
+date -d "+1 year" +%Y%m%d    # 显示下一年的日期
+date -d '30 days ago'            # 显示30天前日期
+date -d next-month +%Y%m     # 显示距今一个月的时间
+【设定时间】
+date -s            # 设置当前时间，只有root权限才能设置，其他只能查看 
+date -s 20151223  # 设置成20151223，这样会把具体时间设置成空00:00:00 
+date -s 01:01:01   # 设置具体时间，不会对日期做更改 
+date -s "01:01:01 2015-12-23"  # 这样可以设置全部时间 
+date -s "01:01:01 20151223"   # 这样可以设置全部时间 
+date -s "2012-05-23 01:01:01"  # 这样可以设置全部时间 
+date -s "20120523 01:01:01"    # 这样可以设置全部时间
+【其他】
+date -r install.log   # 显示文件最后修改时间
+【归纳 | 总结】
+【备注一】用date度量命令或脚本执行时间举例:
+ 
+【备注二】date在备份文件时的运用:
+ 
+【exit命令】
+ 
+【实例 | 技巧】
+exit                                      # 退出终端，logout命令是注销用户，注意两者区别
+【归纳 | 总结】
+【备注一】关于exit命令的几点说明: 
+(1) 执行exit可使shell以指定的状态值退出。若不设置状态值参数，则以预设值退出
+(2) 状态值0代表执行成功，其他值代表执行失败。
+(3) exit也可用在脚本，离开正在执行的脚本，回到shell
+(4) $?上一个命令的退出码，一般与exit组合使用(exit 0);echo $?;(exit 4);echo $?
+(5) 如无提供退出码，则以最后一个命令执行结果为退出码。比如:exit $?
+【备注二】exit命令与&&,||的组合使用:
+例1:
+ 
+例2:
+ 
+【总结一】exit与logout区别:
+(1) logout 注销用户; exit 退出控制台
+(2) 对于多层shell，用于逐层退出，到最顶层shell，作用就和logout相同。
+(3) 如果没有切换过用户的话，这两个命令都是退出控制台了。 
+(4) 如果切换过用户的话，这两个命令都是注销当前用户，返回上一个用户
+【总结二】exit在Shell脚本中使用:
+ 
+【ps命令】
+ 
+【实例 | 技巧】
+ps -l                        # 列出自己这次登录的PID与相关信息
+ps aux | more                # 列出当前所有正在内存中的进程
+ps -lA | less                  # 显示出所有的进程
+ps aux | egrep "(cron|httpd)"  # 列出与这两个服务相关联的PID
+【归纳 | 总结】
+【总结一】top与ps命令区别:
+	ps主要静态查看系统进程的
+	top则用于动态查看系统进程
+【fuser命令】
+ 
+【实例 | 技巧】
+fuser /OSM/log/cur_debug/messages      # 哪个进程在使用该文件
+fuser -k /OSM/log/cur_debug/messages   # 杀该进程
+fuser -m -u /mnt/usb                     # 查看使用该设备的所有进程
+【归纳 | 总结】
+【备注一】关于fuser命令的几点说明:
+(1) 有时候umount的时候出现device is busy的时候，要用到该命令
+(2) 可以用fuser -k filename来杀进程, 类似于kill -9 进程号
+【top命令】
+ 
+【实例 | 技巧】
+top                   # 查看CPU,内存，进程等使用情况
+top -c                # 显示完整命令
+top -u root           # 仅显示root用户的信息
+top -p  4001         # 按进程号来显示
+top -c -n3 -d4        # 完整显示三次，每次间隔时间4秒
+【归纳 | 总结】
+统计信息区
+ 
+ 
+进程统计区
+ 
+ 
+命令行参数
+ 
+交互式操作
+ 
+【kill命令】
+ 
+【pstree命令】
+ 
+【实例 | 技巧】
+pstree -A | more      # 列出当前系统上所有进程树的关联性
+pstree -Aup | less     # 列出所有进程的关联性，同时显示PID和用户
+【who命令】
+ 
+【实例 | 技巧】
+who            # 简单显示登录系统用户信息
+who am i        # 可轻松获取用户列表， 登录时间， 终端， IP等
+who -b         # 显示系统最后一次启动的时间
+who -r          # 显示初始化进程的运行级别
+who -q         # 用来显示当前登录用户个数
+who -u -H      # 显示空闲进程，并加标题
+【归纳 | 总结】
+【备注一】who命令显示内容解析:
+第一列: 显示用户名称
+第二列: 显示连接方式. tty:用户直接连接到服务器 pts:意味着远程登录
+第三列: 显示登录日期
+第四列: 显示登录时间
+第五列: 显示用户登录的IP地址
+【w命令】
+ 
+【实例 | 技巧】
+w                         # 不带任何参数，最常用的方式
+w -f                       # 切换显示远程主机名
+【归纳 | 总结】
+【备注一】w命令显示内容解析:
+	USER:    登录用户名
+	TTY:      登录后系统分配的终端号
+	FROM:   远程主机名，即从哪里登录的
+	LOGIN@: 何时登录
+	IDLE：    用户空闲时间。这是个计时器，一旦用户执行任何操作，该计时器便会被重置
+	JCPU:     和该终端连接的所有进程占用时间。包括当前正在运行的后台作业占用时间
+	PCPU:    当前进程所占用时间
+	WHAT:   当前正在运行进程的命令行
+【last命令】
+ 
+【实例 | 技巧】
+last                             # 常用用法，不加参数
+last -10                        # 列出最新的10条记录
+last -n 5 -a -i                   # 最后一列显示IP地址
+last -n 8 -f /var/log/btmp       # 该文件更详细，可显示ssh远程登录
+last -n 10 admin                # 显示前10个admin登录的记录
+【归纳 | 总结】
+【备注一】关于last命令的几点说明:
+(1) wtmp,btmp,utmp均为二进制文件，不能用cat查看，可用last打开
+(2) echo > /var/log/wtmp可清空wtmp记录
+【备注二】last命令显示信息解析:
+第一列: 用户名 
+第二列: 终端位置
+1)	pts: 意味着从SSH或TELNET的远程连接用户
+2)	tty: 意味着直接连接到计算机或者本地连接用户
+3)	除了重启，所有状态会在启动时显示
+第三列: 登录IP或者内核
+1)	0.0或者什么都没有的话：意味着用户通过本地终端连接
+2)	重启活动，会显示内核版本
+第四，五、六列: 开始时间 | 结束时间 | 持续时间
+1)	still log in: 还在登录  | down: 直到正常关机 | crash: 直到强制关机
+【扩展 | 引申】
+【引申一】Linux系统的三个主要日志子系统: 
+1. 进程日志(acct/pacct: 记录用户命令)
+2. 错误日志(/var/log/messages:系统级信息；access-log:记录HTTP/WEB的信息)
+3. 连接日志(/var/log/wtmp,/var/log/btmp,/var/run/utmp)
+1) 有关当前登录用户的信息记录在文件utmp中
+2) 登录进入和退出纪录在文件wtmp中
+3) 最后一次登录文件可以用lastlog命令察看
+4) 数据交换、关机和重起也记录在wtmp文件中
+【sleep命令】
+ 
+【实例 | 技巧】
+sleep 5m                        # 休眠5分钟
+date; sleep 30; date              # 显示日期后休眠30秒,再显示日期
+【shutdown命令】
+ 
+【实例 | 技巧】
+shutdown -h now                          #  马上关机
+shutdown -h 30                            # 30分钟后关机
+shutdown -r 10:30 &                        # 10点30分准时重启，并放后台执行
+shutdown +5 "System will be shutdown after 5 minutes"    # 无参默认关机
+shutdown -k now "System will be shutdown"   # 仅告警不关机
+shutdown -rf now                             # 重启时不进行磁盘检测，主要是加快开机速度
+【归纳 | 总结】
+
+【备注一】Linux服务器关机失败可能原因:
+(1) 可能是/sbin目录未加在PATH中, 处理办法  $ export PATH=/sbin:$PATH
+(2) 可能所有者缺少suid的特殊权限, 处理办法  $ chmod u+s /sbin/shutdown
+【总结一】:shutdown, halt, reboot, init, poweroff命令的区别:
+	shutdown: 安全的关机方式，相当于halt + reboot + write三合一
+	halt    : 最简单的关机命令，不用参数;halt其实就是调用shutdown -h。
+	reboot  : 最简单的重启命令，不用参数;工作机制跟halt一样﹐reboot:重启﹐halt:关机
+	init    : 所有进程的祖先，init定义了8个运行级别(runlevel)， init 0为关机;init 6为重启
+	poweroff: 非安全的关机方式，除非确定数据已经保存，不推荐使用
+【总结二】shutdown最后总结:
+【三个用途】:    可用来关机，重启，发送告警信号 
+【三个时间】:    要么马上关机， 要么多少分钟后，要么具体时间点
+【三个关机命令】
+	shutdown -h now  或者 shutdown -h +5 或者 shutdown -h 10:30
+	halt
+	init 0
+【三个重启命令】
+	shutdown -r now 或者 shutdown -r +5 或者 shutdown -r 10:30
+	reboot
+	init 6
+【uptime命令】
+ 
+【实例 | 技巧】
+uptime              # 显示当前时间；启动时间；系统平均负载
+【归纳 | 总结】
+【备注一】数据出处与逻辑CPU个数:
+(1) 平均负载均衡数据取自: $ cat /proc/loadavg
+(2) 查看逻辑CPU个数 $ cat /proc/cpuinfo | grep "core id" | uniq | wc –l
+【总结一】平均负载的参考价值:
+在Linux中，要查看系统1分钟、5分钟、15分钟的系统负载，可以用uptime
+其中15分钟内运行队列中的平均进程数量很有参考意义, 主要看两方面:
+(1) 从1分钟-->5分钟-->15分钟，看这个数字是递增还是递减
+(2) 从15分钟内运行队列的平均进程数，一般必须 < 0.7 * 虚拟内核数
+【iostat命令】
+ 
+【实例 | 技巧】
+iostat -d 1 10       # 查看TPS和吞吐量信息
+iostat -c 1 10       # 查看CPU状态
+iostat -d -x 2 3     # 查看设备使用率(%util), await响应时间
+【归纳 | 总结】
+【备注一】常用参数-c,-d,-x的具体含义:
+ 
+ 
+ 
+【备注二】iostat -x参数使用示例:
+ 
+【扩展 | 引申】
+【引申一】用iostat作IO性能分析注意事项:
+ 
+【uname命令】
+ 
+【实例 | 技巧】
+uname -a           # 显示系统完整信息
+uname -m          #  显示硬件名称(machine)
+uname -n           # 显示网络节点名(nodename)
+uname -r           # 显示内核发行版本(release)
+uname -s           # 显示内核名称
+uname -v           # 显示内核版本
+uname -i           # 显示硬件平台
+uname -o          # 显示操作系统
+uname -p          # 显示处理器类型
+【归纳 | 总结】
+【备注一】关于uname的几点说明:
+(1) 编译内核时，经常用uname -v来查看内核的版本
+(2) 查看主机名既可以用uname -n也可以用hostname命令
+【sudo命令】
+ 
+【实例 | 技巧】
+sudo -u root halt           # 暂时借用root账号管理员权限，执行关机操作
+sudo yum install package   # 也可以不用-u参数，效果跟上面等价
+sudo su - root              # 针对有sudo而无su权限, -表示继承root的环境变量
+【归纳 | 总结】
+【总结一】sudo能做什么
+(1) sudo能够限制指定用户在指定主机上运行某些命令。 
+(2) sudo可以提供日志，记录每个用户使用sudo的行为，并且能将日志传到中心主机 
+(3) sudo为系统管理员提供配置文件，允许系统管理员集中地管理用户的使用权限和使用的主机。它默认的存放位置是/etc/sudoers 
+(4) sudo使用时间戳文件来完成类似“检票”的系统。当用户执行sudo并且输入密码后，用户获得了一张默认存活期为5分钟的"入场券",超时以后，用户必须重新输入密码
+【总结二】visudo的用法:
+sudoers文件就是sudo的配置文件了，不建议直接vi/vim这个文件，建议使用visudo这个命令来编辑这个文件：# visudo 
+原因有二:
+一是它能够防止两个用户同时修改它
+二是它也能进行有限的语法检查
+所以，即使只有你一个超级用户，你也最好用visudo来检查一下语法. 
+如果出现下面的错误提示，则可以选择:
+键入“e”是重新编辑
+键入“x”是不保存退出
+键入“q”是退出并保存。
+如果真选择q，那么sudo将不会再运行，直到错误被纠正
+ 
+【总结三】 sudo与su的区别:
+sodu(super user do), sudo是提升最出色，最安全的方法
+sudo 允许用户借用超级用户的权限，然而"su"命令实际上是允许用户以超级用户登录。所以sudo比su更安全。超级用户root密码应该掌握在少数用户手中，这绝对是真理！并不建议使用sudo或者su来处理日常用途，因为它可能导致严重的错误如果你意外的做错了事，在Linux社区流行一句话："To err is human, but to really foul up everything, you need root password." 翻译过来就是:人非圣贤孰能无过，但是拥有root密码就真的万劫不复了 ubuntu, 就封闭了root用户，都是使用的sudo
+【扩展 | 引申】
+【常见问题一】command not found及处理办法:
+问题现象:
+用$ sudo pip install pil命令来安装python模块，提示command nof foud
+问题原因:
+出于安全考虑，sudo只会获得一个新的，最小化的环境执行，PATH中无路径导致
+$ which pip 查到/usr/local/bin目录下，而该目录一般并不在默认环境中
+处理办法:
+方法一: export PATH=$PATH:/usr/local/bin   # 假如要添加/usr/local/bin目录
+方法二: 打开/etc/sudoers文件，找到"secure_path"一行，添加自己想要的PATH
+【常见问题二】sudo执行的指令很慢原因及其处理办法：
+问题现象:  例如：sudo -u root ls -l /tmp，运行很久才看到结果
+问题原因:  由于/etc/hosts文件中缺失"主机名 <--> IP地址"相互解析条目
+解决方法：
+1）首先运行hostname或uname -n指令，显示当前主机名
+2）然后在/etc/hosts文件中加入一条主机名与IP地址之间的相互解析条目
+$ echo '127.0.0.1 host.localdomain host' >> /etc/hosts
+【常见问题三】常用visudo配置:
+账户名   主机名称=(可切换的身份)   可用的指令
+root ALL=(ALL)	ALL                  # root用户可以在域中任何机器上运行所有用户的所有命令
+test  ALL=(root)  ALL               # 允许test用sudo命令执行root的所有命令
+%testgroup  ALL=(root)  ALL            # 允许整个组用
+test ALL=(root) NOPASSWD: ALL          # 切换时需输入密码,默认必须输入                    
+test localhost=(jerry,tom) /bin/cat, /bin/ls  # test用户可以切换到jerry,tom
+【常见问题四】日志，安全方面配置:
+sudo为安全考虑得很周到，不仅可以记录日志，还能在有必要时向系统管理员报告。
+但是，sudo的日志功能不是自动的，必须由管理员开启。
+这样来做： 
+$ touch /var/log/sudo 
+$ vi /etc/syslog.conf 在syslog.conf最后面加一行（必须用tab分割开）并保存： 
+local2.debug /var/log/sudo 
+重启日志守候进程， $ ps aux | grep syslogd 把得到的syslogd进程的PID(输出的第二列是PID)填入下面： 
+$ kill -HUP PID
+这样sudo就可以写日志了
+【stat命令】
+ 
+【实例 | 技巧】
+stat /etc/passwd           # 展示该文件的详细信息
+stat *                      # 查看该目录下的所有文件及子目录的详细信息
+stat -f /etc/passwd         # 显示文件系统的详细信息
+stat -t /etc/passwd         # 在Shell脚本中很有用，可用cut来处理获得想要的信息
+stat -c "%a" /etc/passwd   # 八进制文件权限，在Shell脚本中有时有用
+【归纳 | 总结】
+【总结一】atime, mtime, ctime:
+(1) 当我们仅仅只是读取文件时，atime改变，而mtime,ctime不会改变,比如执行cat,more命令，但执行ls,stat命令不会修改文件的访问时间
+(2) 当修改文件时，atime，mtime，ctime都会跟着改变.  比如执行vi,touch命令
+(3) 当修改文件属性时，ctime改变，而atime，mtime不变。比如执行chmod,chown命令
+【总结二】用相应的ls命令来查看mtime,ctime,atime属性:
+另个除了可以通过stat来查看文件的mtime,ctime,atime等属性，也可以通过ls命令来查看，具体如下:
+ls -l  filename 列出文件的 mtime （最后修改时间）
+ls -lc filename 列出文件的 ctime （最后更改时间）
+ls -lu filename 列出文件的 atime （最后存取时间）
+【备注一】stat命令使用示例:
+ 
+【lsmod命令】
+ 
+【实例 | 技巧】
+lsmod                # 列出所有载人系统的模块，该信息来源于/proc/modules
+lsmod | grep -i ext3   # 查询当前系统是否加载某些模块
+【归纳 | 总结】
+【备注一】关于模块的几点说明:
+(1) Linux操作系统的核心具有模块化的特性，因此在编译核心时，务须把全部的功能都放入核心。也可以将这些功能编译成一个个单独的模块，待需要时再分别载入.
+(2) Linux老版本会将一些重要的模块加入到内核功能中，这样不利于模块的开发和系统的稳定。现在主要使用模块化的驱动来支持某些功能，在需要某功能的时候，加载该模块
+(3) 动态加载的方式便于驱动程序的调试，同时可以针对产品的功能需求，进行内核的裁剪，将不需要的驱动去除，大大减小了内核的存储容量，可使内核精简，高效.
+【总结一】modinfo,lsmod,insmod,rmmod,modprobe
+(1) 通过modinfo来查看单个模块的详细信息
+(2) 通过lsmod来查看当前系统中已经加载的模块
+(3) 通过insmod来加载模块，老版本常用
+(4) 通过rmmod来卸载模块
+(5) 通过modprobe可以加载，卸载，查看模块信息，新版Linux常用
+【insmod命令】
+ 
+【实例 | 技巧】
+insmod test.ko                                     # 加载当前目录下的模块，使用相对路径
+insmod /lib/modules/2.6. 18-8.el5/kernel/drivers/md/raid1.ko  # 绝对路径
+【归纳 | 总结】
+【备注一】使用insmod模块的几点说明:
+(1)	确保内核版本和内核头文件一致，否则必定会报错:Invalid module format
+$ uname -r
+2.6.28-11-generic
+$ ls /usr/src/
+linux-headers-2.6.28-11 linux-headers-2.6.28-11-generic
+(2)	内核2.4或之前的版本，一般用insmod来加载，2.6之后版本用modprobe
+【rmmod命令】
+ 
+【实例 | 技巧】
+rmmod pppoe                                   # 卸载pppoe模块，记住别带.ko后缀
+rmmod -v pppoe >1.log                          # 卸载模块；并将详细信息输入到1.log里面
+【归纳 | 总结】
+【备注一】与模块相关的几个文件或目录:
+	cat /proc/modules  # 能够显示驱动模块大小、在内核空间中的地址
+	cat /proc/devices   # 只显示驱动的主设备号，且是分类显示 
+	cd /sys/module/   # 下面存防对应驱动的目录，目录下包含驱动的分段信息
+【modinfo命令】
+ 
+【实例 | 技巧】
+modinfo sg                             # 显示sg模块信息
+【modprobe命令】
+ 
+【实例 | 技巧】
+modprobe -v floppy           # 安装软驱模块
+modprobe -v -r floppy         # 卸载软驱模块
+modprobe -l                   # 列出所有已加载模块，相当于lsmod命令
+【归纳 | 总结】
+【备注一】用modprobe卸载，显示，加载模块示例:
+	modprobe raid1         # 加载RAID1阵列级别模块
+	lsmod | grep raid1       # 显示已加载的RAID1阵列级别模块
+	modprobe -r raid1       # 删除RAID1阵列级别模块
+	modprobe -l | grep raid1  # 显示RAID1阵列级别模块
+【free命令】
+ 
+【实例 | 技巧】
+free [-k | -m | -g]             # 以KB,MB,GB的方式显示内存使用情况
+free -t                       # 显示物理内存，交换区间总的使用情况
+free -m -s 2                  # 每隔2秒显示内存输出情况
+watch -n 2 -d free           # 每隔2秒持续监控内存差异的输出情况
+【归纳 | 总结】
+【备注一】free命令相关的几个文件:
+	cat /proc/meminfo    # 显示内存使用情况
+	cat /proc/pid/maps   # 显示当前进程所占用的虚拟地址
+	cat /proc/kcore       # 内存的镜像文件
+total内存 = 插槽中的内存条容量 – 显卡占用的内存
+ 
+【tcpdump命令】
+ 
+【实例 | 技巧】
+tcpdump                                # 显示tcp包信息
+tcpdum -c 10 -q                         # 精简模式下显示10个包
+tcpdump -i bond0                     # 监听某个网卡
+tcpdump udp port 123                # 截取对本机的udp 123端口进行监视的数据包
+tcpdump host 192.168.0.1             # 显示和主机192.168.0.1通信的数据包
+tcpdump -n -i eth0 host 192.168.0.1 and 192.168.0.2    # 截取两台主机之间的数据
+tcpdump -n -i eth0 dst 192.168.0.1 or 192.168.0.2       # 截取进入两台主机的数据
+【截取主机1与主机2或3之间的通信包】
+tcpdump host 192.168.0.1 and /(192.168.0.2 or 192.168.0.3 /)
+【截取主机192.168.0.1除了和主机192.168.0.2之外所有主机通信的ip包】
+tcpdump ip host 192.168.0.1 and ! 192.168.0.2
+【截取主机192.168.0.1接收或发出的telnet包】
+tcpdump tcp port 23 host 192.168.0.1
+【截获除了主机1、2外访问本机http端口的数据包】
+tcpdump -i eth0 host ! 192.168.0.1 and ! 192.168.0.2 and dst port 80
+tcpdump tcp -i eth1 -t -s0 -c 100 and dst port ! 22 and src net 192.168.1.0/24 -w ./target.cap
+(1) ip 、tcp、udp、icmp这些选项等都要放到第一个参数的位置，用来过滤数据报的类型
+(2) -i eth1 : 只抓经过网口eth1的包
+(3) -t : 不显示时间戳
+(4) -s 0 : 抓取数据包时默认抓取长度为68字节。加上-s 0 后可以抓到完整的数据包
+(5) -c 100 : 只抓取100个数据包
+(6) dst port ! 22 : 不抓取目标端口是22的数据包
+(7) src net 192.168.1.0/24 : 数据包的源网络地址为192.168.1.0/24
+(8) -w ./target.cap : 保存成cap文件，方便用wireshark工具进行分析
+【归纳 | 总结】
+【备注一】tcpdump几种常用的参数:
+(1) 抓取回环网口的包：tcpdump -i lo
+(2) 防止包截断：tcpdump -s0
+(3) 以数字显示主机及端口：tcpdump -n
+(4) 生成捕获的包文件，供Wireshink工具分析使用tcpdump -w
+【总结一】tcpdump命令中几种关键字:
+	第一种:类型关键字，包括:host，net，port
+	第二种:传输方向关键字，包括:src , dst  
+	第三种:协议关键字，包括: ip, arp, tcp, udp等类型
+	第四种:其他关键字, 包括:gateway, broadcast, less, greater, not, !, and, &&, or, ||
+【ethtool命令】
+ 
+【实例 | 技巧】
+ethtool eth0                             # 查询eth0网口基本设置, grep Speed可看到网速
+ethtool -i eth0                                  # 查询eth0网口的相关信息, 网卡驱动等信息
+ethtool -d eth0                                 # 查询eth0网口注册信息
+ethtool -r eth0                                  # 重置eth0网口到自适应模式
+ethtool -S eth0                                  # 查询eth0网口收发包统计, 收发包是否出错
+ethtool -s eth0 speed 10 duplex full autoneg on  # 设置网口速率10M、全双工、自协商
+ethtool -s eth1 autoneg off;ethtool eth1          # 关闭网卡的自动协商并且查看修改结果
+ethtool -t eth0 [offline|online]                    # 适配器在线或离线自测试
+ethtool -p eth0                       # 查看相应设备名称对应的设备位置，通过灯闪烁来定位
+【归纳 | 总结】
+【备注一】关于ethtool命令的几点说明:
+(1) Linux系统将检测到的第一块以太网卡命名为eth0, 第二块为eth1
+(2) 用ethtool -K eth0 rx off关闭网卡对收到的数据包的校验功能
+(3) 用ethtool -k eth0查看校验功能是否已被停止
+(4) 用ethtool -p eth0 600查看eth0对应那块网卡,600即10分钟
+(5) 用ethtool命令对网卡进行设置只在当前Shell有效，要长久有效必须修改配置
+【备注二】如何使ethtool设置永久保存在网络设备中
+ 	解决方法一: 
+ethtool设置可通过/etc/sysconfig/network-scripts/ifcfg-ethX文件保存,从而在设备下次启动时激活选项。 例如：ethtool -s eth0 speed 100 duplex full autoneg off
+此指令将eth0设备设置为全双工自适应，速度为100Mbs。若要eth0启动时设置这些参数, 修改文件/etc/sysconfig/network-scripts/ifcfg-eth0, 添加如下一行: 
+ETHTOOL_OPTS="speed 100 duplex full autoneg off"
+ 	解决方法二: 
+将ethtool设置写入/etc/rc.d/rc.local之中
+【jobs命令】
+ 
+【实例 | 技巧】
+【Ctrl+Z】假如我们终端执行watch -n 30 ./test.sh(每30秒执行一次test.sh脚本)，按Ctrl+Z
+ 
+【bg】执行bg %作业号，让作业1在后台执行
+ 
+【fg】执行fg %作业号，将作业从后台调到前台执行
+ 
+【jobs】执行jobs -l命令，列出当前作业号
+ 
+【kill】执行kill -9 %作业号，可以终结当前的作业
+ 
+【&】将当前的作业调到后台执行，使当前的终端可以执行其他任务
+ 
+【nohup】用&命令可放后台执行，但当前的终端logout之后，该作业也会终止，要想让任务始终不挂起的话，就要用到nohup，一般和&组合使用. 它会忽略输出但会将输出添加到nohup.out文件中;
+ 
+【id命令】
+ 
+【实例 | 技巧】
+id                # 显示当前用户信息(打印用户名，UID和该用户属于的所有组)
+id -g            # 只输出有效组的组ID即， GID
+id -G            # 输出所有不同的组ID(有效的，真实和补充的)
+id admin        # 显示特定用户的信息
+【归纳 | 总结】
+【备注一】关于id命令的几点说明:
+(1) 如果想知道某个用户的UID和GID，那么这个命令非常有用，而不需在/etc/group搜寻
+(2) Shell脚本经常判断是否是root账号和普通账号,看是否要做sudo或权限操作, root账号的ID为0.
+(3) 1-499为系统服务或软件厂商自定义ID， 普通用户UID从500开始依次递增
+(4) GID的值从/etc/group文件中读取，UID则从/etc/passwd读取
+(5) root   :x   :0  :0  :root    :/root  :/bin/bash
+   用户名 :密码:UID:GID:用户描述:家目录:登录SHELL
+【history命令】
+ 
+【实例 | 技巧】
+history                      # 常用用法，显示历史命令
+history 200 | more           # 以分页方式显示前200条命令，一般会输出1000条
+history | tail -3              # 显示最后3条命令
+!!                           # 执行上一条命令
+!980                        # 执行history显示的第980条命令
+!top                        # 执行最后一条命令以top开头的命令
+!-1                         # 执行最后一条命令
+!?os_setup?                 # 执行包含os_setup的命令
+history -c                   # 清除目前shell中所有历史命令
+history -w                  # 一般不包含当前会话，除非强制将当前命令写入~/.bash_history
+history -w & cp ~/.bash_history history.txt  # 保留在另一个文件中
+【归纳 | 总结】
+【备注一】历史命令的调用方法：
+	使用上、下箭头调用
+	使用“！n”重复执行第n条历史命令
+	使用“!！”重复执行上一条历史命令
+	使用Ctrl+P 快捷键并回车执行
+	使用 “！字符串”重复执行最后一条以该字串开头的命令
