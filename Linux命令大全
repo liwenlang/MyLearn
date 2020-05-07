@@ -36,8 +36,8 @@ ps -ef
 查看历史命令文件
 cat /root/.bash_history
 
-查看文件中的关键字
-find / -name "*.sh" | xargs grep *sh
+查看指定文件中的特殊关键字
+find / -name "*.sh" | xargs grep -r -E -i 'pass=|password=|pwd=|passwd=|pswd=|ak=|sk=|key='
 
 
 --------------------------------------------------------------------------------------------------------------------------------
