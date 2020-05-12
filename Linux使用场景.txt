@@ -1,0 +1,2648 @@
+
+	文件管理  
+cat
+　用来把文档串联后传到基本输出                        【Linux | 阵列】
+more
+用来一页一页翻动阅读                                【Linux | 阵列】
+less
+用来一页一页翻动阅读，但用法比more更灵活          【Linux | 阵列】
+tail
+用来强制获取文件新增的内容                          【Linux | 阵列】
+tee
+　用来从标准输入中读取数据，并输出到标准输出设备      【Linux | 阵列】
+chattr
+　用来设置ext2/ext3文件隐藏属性                      【Linux | 阵列】
+lsattr
+用来显示文件隐藏属性                                【Linux | 阵列】
+find
+用来在指定目录下查找文件                            【Linux | 阵列】
+locate
+用来查找符合条件的文档，根据数据库模糊匹配          【Linux | 阵列】
+which
+用来查找可执行文件位置                              【Linux | 阵列】
+whereis
+用来查找符合条件的源代码、二进制文件、帮助文件      【Linux | 阵列】
+cksum
+用来检查文件的CRC是否正确                          【Linux | 阵列】
+dos2unix
+用来将DOS格式的文本文件转换为UNIX格式            【Linux | 阵列】
+file
+　用来辨识文件类型                                    【Linux | 阵列】
+umask
+　用来设定权限掩码，默认权限-权限掩码 = 预设权限       【Linux | 阵列】
+touch
+　用来修改文件时间属性或创建空文件                    【Linux | 阵列】
+mkdir
+  用来创建空目录                                      【Linux | 阵列】
+rm
+　用来删除一个文件或目录                              【Linux | 阵列】
+mv
+　用来做文件名或目录更名，或将其移动位置              【Linux | 阵列】
+
+cp
+　用来Linux服务器内复制文件或目录                    【Linux | 阵列】
+scp
+　用来Linux服务器之间复制文件或目录                  【Linux | 阵列】
+paste
+　用来按列合并文件                                    【Linux | 阵列】
+cut
+　用来以行为单位截取指定长度的列                      【Linux | 阵列】
+join
+　用于将两个相关联的文件中，指定的栏位连接起来        【Linux | 阵列】
+fold
+　用来限制文件列宽                                    【Linux | 阵列】
+colrm
+　用来从文件中过滤掉指定的列                          【Linux | 阵列】
+comm
+　用来比较两个已经排过序的文件                        【Linux | 阵列】
+patch
+　用来修补文件或升级内核                              【Linux | 阵列】
+split
+　用来拆分大文件为多个小文件                          【Linux | 阵列】
+csplit
+　用来按照指定的范式来分割文件                        【Linux | 阵列】
+cmp
+　用来比较两个二进制文件是否有差异                    【Linux | 阵列】
+diff
+　用来比较文件的差异，逐行比较文本文件的异同处        【Linux | 阵列】
+awk
+　用来做样式扫描与处理的工具                          【Linux | 阵列】
+ln
+　用来为某个文件或目录在另外一个位置建一个同步的链接  【Linux | 阵列】
+chown
+　用来将指定的文件改为指定的用户或组                  【Linux | 阵列】
+chmod
+  用来改变Linux系统文件或目录的访问权限              【Linux | 阵列】
+chgrp
+　用来变更文件或目录的所属群组                        【Linux | 阵列】
+
+
+
+	文档编辑
+grep
+　用来搜索过滤，功能强大                               【Linux | 阵列】
+tr
+　用来替换、删除文件中的字符                          【Linux | 阵列】
+wc
+　统计指定文件中的行数，单词数，字符数                【Linux | 阵列】
+expr
+　用来做手工命令计算器                                【Linux | 阵列】
+sort
+　用来将文本文件内容进行排序，以行来排序              【Linux | 阵列】
+uniq
+　用来检查及删除文件中重复出现的行列                  【Linux | 阵列】
+nl
+  用来显示文件中行号                                         【Linux | 阵列】
+sed
+　用来对文本文件中的行进行修改和编辑，删除，替换操作  【Linux | 阵列】
+vi
+　用来编辑文件，Linux下最常用的文本编辑器             【Linux | 阵列】
+
+	磁盘管理       
+cd
+　用来切换工作目录                                    【Linux | 阵列】
+df
+　用来显示目前Linux系统上的文件系统的磁盘使用情况    【Linux | 阵列】
+du
+　用于显示指定目录或文件所占用的磁盘空间              【Linux | 阵列】
+tree
+　用来以树状图的方式列出目录的内容                    【Linux | 阵列】
+ls
+　用来列出工作目录下的子文件及子目录                  【Linux | 阵列】
+pwd
+用来显示工作目录名                                  【Linux | 阵列】
+mount
+　用来将其他文件系统挂载在Linux系统下                【Linux | 阵列】
+
+
+	磁盘维护
+badblocks
+用来检查磁盘中损坏的区块                            【Linux|     】
+dd
+　用来对磁盘性能进行测试，数据拷贝                    【Linux | 阵列】
+hdparm
+　用来检测、显示及设定IDE或SCSI硬盘的参数            【Linux | 阵列】
+sync
+　用来将内存中的数据刷盘                              【Linux | 阵列】
+mkfs
+　用来在特定分区建立Linux文件系统                    【Linux | 阵列】
+fsck
+　用来检查并修复Linux文件系统                        【Linux | 阵列】
+fdisk
+　用来管理Linux磁盘分区                                    【Linux | 阵列】
+
+	网络通讯
+ping
+　用来检查网络的连通性                                【Linux | 阵列】
+wall
+　用来将公告信息发送给终端机用户                      【Linux | 阵列】
+mesg
+　用来设置终端机的写入权限                            【Linux | 阵列】
+talk
+  用来与其他登录的用户双向通讯                        【Linux |     】
+netstat
+　用来获悉整个系统的网络情况                          【Linux | 阵列】
+ifconfig
+　用来查看和配置网络设备                                    【Linux | 阵列】
+
+
+
+
+
+	系统管理
+useradd
+　用来创建用户帐号                                    【Linux | 阵列】
+userdel
+　用来删除用户帐号                                    【Linux | 阵列】
+usermod
+　用来修改用户帐号                                    【Linux | 阵列】
+date
+　用来显示或设定系统的日期与时间,可格式化输出          【Linux | 阵列】
+exit
+　用来离开当前的Shell                                 【Linux | 阵列】
+ps
+　用来静态查看系统进程的运行情况                      【Linux | 阵列】
+fuser
+　用来显示正在使用某个文件，socket的进程             【Linux | 阵列】
+top
+　用来查看系统CPU，内存，进程的使用情况             【Linux | 阵列】
+kill
+　用来杀掉或重启某个进程                              【Linux | 阵列】
+pstree
+　用来以树形结构形象显示进程之间关联                  【Linux | 阵列】
+who
+　用来查看登录者的信息                                【Linux | 阵列】
+w
+　用来查看登录者的信息及所做的操作                    【Linux | 阵列】
+last
+　用来列出截止目前登录过系统的用户信息                【Linux | 阵列】
+sleep
+　用来将目前动作延迟一段时间                          【Linux | 阵列】
+shutdown
+　用来关机，重启或发送告警信息                        【Linux | 阵列】
+uptime
+　用来查看当前时间；系统平均负载                      【Linux | 阵列】
+iostat
+　用来查看硬盘IO情况                                  【Linux | 阵列】
+
+
+
+uname
+　用来显示系统一些信息                                【Linux | 阵列】
+sudo
+　用来暂借root权限执行某些操作                             【Linux | 阵列】
+stat
+　用来显示文件的详细信息，包括atime, mtime, ctime    【Linux | 阵列】
+lsmod
+　用来列出已加载系统的模块                            【Linux | 阵列】
+insmod
+　用来载入模块。此类载入的模块，通常为设备驱动程序    【Linux | 阵列】
+rmsmod
+  用来卸载模块                                        【Linux | 阵列】
+modinfo
+　用来显示kernel模块的信息                           【Linux | 阵列】
+modprobe
+　用来显示，加载及删除相依的模块                       【Linux | 阵列】
+free
+　用来查看内存使用情况                                【Linux | 阵列】
+tcpdump
+  用来将网络中传送的数据包的"头"完全截获下来提供分析  【Linux |     】
+ethtool
+  用于查询及设置网卡参数                              【Linux | 阵列】
+jobs
+  用来查看后台执行的任务                              【Linux | 阵列】
+id
+　用来显示用户的UID，以及所属群组的GID              【Linux | 阵列】
+history
+　用来记录执行过的历史命令                            【Linux | 阵列】
+
+
+
+
+
+
+
+	系统设置
+passwd
+　用来修改用户密码                                    【Linux | 阵列】
+clear
+　用来清除终端屏幕                                           【Linux | 阵列】
+yum
+　用来管理shell前端软件包                             【Linux |     】
+ulimit
+　用来控制shell程序的资源，同时对系统性能进行调优       【Linux | 阵列】
+chkconfig
+　用来检查和设置系统的各种服务                        【Linux | 阵列】
+set
+　用来依照不同的需求来设置所使shell的执行方式         【Linux | 阵列】
+time
+　用来量测特定指令所需消耗的时间及系统资源等资讯      【Linux | 阵列】
+alias
+　用来设置指令的别名                                         【Linux | 阵列】
+declare
+　用来声明shell变量                                   【Linux | 阵列】
+export
+　用来设置或显示环境变量                                    【Linux | 阵列】
+dmesg
+　用来显示开机信息                                    【Linux | 阵列】
+enable
+　用来开启或关闭shell内建指令                         【Linux | 阵列】
+at
+  用于设置定时任务，指定一个时间执行一个任务          【Linux | 阵列】
+hwclock
+  用来查询和设置硬件时钟                              【Linux | 阵列】
+eval
+　用来重新运算求出参数的内容                               【Linux | 阵列】
+echo
+  用来打印一段文字，起提示作用                        【Linux | 阵列】
+
+	压缩解压
+tar
+　用来压缩、解压缩文件                                【Linux | 阵列】
+
+	速查备忘
+if条件语句
+　if 语句的语法结构、实例说明                            
+case选择语句
+  case 语句的语法结构、实例说明  
+for循环语句
+  for语句的语法结构、实例说明
+while循环语句
+  while语句的语法结构、实例说明
+输入输出重定向
+文件描述符说明列表、全部命令行列表、Here Document
+几种常用操作符
+  字符串比较操作符、数字逻辑操作符、文件状态逻辑操作符
+常用按键速查表
+  TAB、CTRL+R、CTRL+U、CTRL+K、CTRL+D等常用按键
+Linux启动顺序图
+  从机器启动-->读取BIOS-->...再到登陆整个启动流程
+Linux中的设备号
+  Linux中各种常用设备号，比如说/dev/sda…
+Shell中参数传递
+  $#,$?, $*,$$, $!, $n等各种Shell中的参数
+Linux的目录结构
+  Linux第一层目录结构及其常用功能
+VI/VIM键盘图
+  完整，详备的vi/vim键盘图
+
+1	文件管理
+【cat命令】
+ 
+【实例 | 技巧】
+cat -n file1 > file2                   # 将file1加编号后输出到file2
+cat -b file1 file2 >> file              # 给两文件加编号后后追加输出到file
+cat /dev/null > /tmp/test.log         # 清空test.log文件
+cat > newfile                        # 创建新文件， 输入内容并用Ctrl+D退出
+cat /OSM/log/cur_debug/messages | more    # 用分页的方式来显示文件内容, 按Q键退出
+ 
+【归纳 | 总结】
+【总结一】:cat的四个主要功能
+(1) 用来显示文件内容，内容多的话，与more, less配合使用 cat messages | more
+(2) 用来创建一个新文件cat > newfile
+(3) 用来合并多个文件cat -b file1 file2 > file
+(4) 用来清空文件cat /dev/null > /tmp/test.txt
+【总结二】:cat与tac命令区别
+tac命令是cat的反写，功能也相反，是将文件从最末一行到第一行开始显示
+	tac /etc/passwd
+	cat /etc/passwd
+【more命令】
+ 
+【实例 | 技巧】
+more file               # 分页的方式显示file文件
+more -s file            # 碰到有两行以上的空格，以一行来显示
+more +20 file          #  从第20行开始显示内容
+cat file | more         # 与其他命令组合使用
+【归纳 | 总结】
+【备注一】more命令常用操作 :
+	空格键(space)  表示向下翻一页
+	Enter键        表示向下翻一行
+	/str           表示向下搜索字符串"str"   
+	:f             立刻显示文件名以及当前显示的行数
+	q             离开  
+【less命令】
+ 
+【实例 | 技巧】
+less /etc/man.config         # 常用用法
+less file1 file2                #  同时显示两个文件
+ps -ef | less                  # ps查看进程信息并以less分页显示
+history | less                 # 用分页方式来显示history的内容
+【归纳 | 总结】
+【备注一】less命令常用操作 :
+空格键        向下翻动一页
+[pagedown]  向下翻动一页
+[pageup]     向上翻动一页
+/str          向下搜索"str" 
+?str          向上搜索"str"   
+n            重复前一个搜索(与/或?有关) 
+N            反向重复前一个搜索(与/或者?有关) 
+q            离开less命令
+【tail命令】
+ 
+【实例 | 技巧】
+tail -f /OSM/log/cur_debug/messages       # 监控messages文件尾部内容，默认10行
+tail -n 20 /OSM/log/cur_debug/messages   # 显示文件messeages最后20行
+tail -n +10 2015.log                        # 从第10行开始显示2015.log文件的内容
+【归纳 | 总结】
+【备注一】tail命令的几点说明 :
+(1) 该命令主要用来查看一个正在生产的文件是否有我们要找的关键字
+(2) 主要参数就是-f, 也可连起来写: tailf /OSM/log/cur_debug/messages
+【tee命令】
+ 
+【实例 | 技巧】
+echo "Hello,World" | tee out.txt       # tee out.txt  覆盖文件
+echo 12345 | tee -                   # 比对结果，tee -输出到标准输出两次
+history | tee history1 history2        # 输出history的执行结果，同时保留两份输出文件
+ls -lart | tee -a file.txt | cat -n         # tee -a file.txt 追加的方式保存文件
+ls -l * 2&>1 | tee -a out.txt           # 标准输出，标准错误均被tee读取
+ls -lR /etc/ | tee A1.out | sort | tee A2.out | sort -r | tee A3.out | uniq -c | tee A4.out > A5.out
+【归纳 | 总结】
+【备注一】为什么在shell中要用tee命令
+某些命令运行的结果会很长，你可能会用less 来上下看。再或者你可能会用>来重定向到文件里。但某些时候程序有可能需要你输入 y 来确认，或者某些程序运行的时间很长，仅仅重定向的话又不太确定是不是它在正常运行。tee 就能做到又输出到屏幕上，又同时重定向到文件。在Shell脚本中很常用
+ 
+【chattr命令】
+ 
+【实例 | 技巧】
+chattr +i /etc/passwd         # 防止某个关键文件被修改
+chattr -i /etc/passwd          # 关闭该文件的i属性
+chattr +a /var/log/messages   # 只能添加数据，不能删除，常用于日志文件
+【归纳 | 总结】
+【备注一】关于chattr命令的几点说明:
+(1) 该命令在系统数据安全方面非常重要，chattr命令最常用的属性就是a和i
+(2) chmod只改变文件的读写、执行权限，更底层的属性是由chattr来改变的
+(3) 如果用root账号还不能修改文件，就要考虑是否被锁定了，也就是chattr命令
+(4) chattr命令并不适合所有的目录。该不能保护/、/dev、/tmp、/var目录
+【lsattr命令】
+ 
+【实例 | 技巧】
+lsattr -aR /etc                         # 列出该文件的属性
+lsattr /etc/passwd /etc/shadow        # 拿两个文件的属性显示出来
+【归纳 | 总结】
+【备注一】关于lsattr命令的几点说明:
+(1) 如果用root账号还不能修改文件，就要考虑是否被锁定了，就要用lsattr命令
+(2) 如果看到Operation not permitted报错， 就要考虑chattr,lsattr两个命令了
+【find命令】
+ 
+【实例 | 技巧】
+find . -name "*.sh"  # 在当前目录及其子目录下，拿所有的sh文件找出来
+find . -ctime -30     # 将当前目录及其子目录下，最近半小时内创建的文件列出
+find $HOME -type f -size 0 -exec ls -l {} \;   #  查找主目录中所有空文件找出来，并列出
+find . -type f -perm 644 -exec ls -l {} \;       # 查找权限符合的并列出
+find /tmp -iname "*.log" | xargs -n50 grep "ERROR"  # xargs执行结果，iname忽略大小写
+find . -name "[A-Z]*" -print file     # 当前目录下查找大写字母开头文件，并将其输出到file文件
+find . -newer 2013.log ! -newer 2015.log  # 查找比第一个文件新，但比第二个文件旧的文件
+find /etc /root ! -user root -mtime -2 -print # 查找这两个文件夹，非root创建,2天内有访问的文件
+find ~ -maxdepth 2 -empty -not -name ".*" # 查找家目录及下一级目录下非隐藏空文件
+find / -type f -exec ls -s {} \; | sort -n -r | head -5  # 查找系统中最大5个文件
+find . -not -empty -type f -exec ls -s {} \; | sort -n  | head -5  # 当前目录下找非空最小的5个文件
+find / -type f -name *.tmp -size +100M -exec rm -i {} \;"  # 查找100M以上tmp文件并删除
+find . -perm 777 -print | xargs chmod –x  # 查找当前目录下权限为777，并去掉可执行权限
+find . \( -name a.out -o -name '*.o' -o -name 'core' \) -exec rm {} \; # 清除c语言产生的临时文件
+find . -type f -mtime +30 -name "*.log" -exec cp {} old \;  # 将30天前的空文件移到old目录下
+find /tmp -name "^[0-9]{4}[AB].sh"  # 正则表达式运用, 2015A.sh或2014B.sh
+find /tmp -name "*.sh" -exec cp {} {}.bak \; # 注意{}的运用
+find . -name ".svn" -exec rm -rf {} \;   #  很常用的一个应用
+find . -regex ‘.*/[0-9]\w.*’         # 匹配以数字开头的文件
+【归纳 | 总结】
+【备注一】关于find命令的几点说明:
+	-exec command {} \;   # {}与\之间有空格，以;结束, 将查询到的结果执行command操作
+	-exec 与 -ok 效果一样，只是多个提示，一种更安全，更友好的方式
+	UNIX/Linux文件系统每个文件都有三种时间戳： 
+访问时间（-atime/天，-amin/分钟）：用户最近一次访问时间。 
+修改时间（-mtime/天，-mmin/分钟）：文件最后一次修改时间。 
+变化时间（-ctime/天，-cmin/分钟）：文件数据元（例如权限等）最后一次修改时间。
+(4)  类型参数列表： f 普通文件 l 符号连接 d 目录 c 字符设备 b 块设备 s 套接字 p Fifo
+【备注二】find命令结合正则表示式使用示例:
+ 
+【locate命令】
+ 
+【实例 | 技巧】
+locate passwd                # 查找passwd文件
+locate -u                     # 手工升级数据库，一般是系统自动维护，更新的频率为每天
+【归纳 | 总结】
+【备注一】关于locate的几点说明:
+(1) locate会去保存文档和目录名称的数据库内，查找合乎条件的文档或目录
+(2) locate命令预设的数据库位于/var/lib/slocate目录里，文档名为slocate.db
+(3) locate内容一般每日更新一次，也可locate -u 或updatedb来手工更新
+【总结一】locate与find区别:
+locate与find是查找文件中应用最频繁的。两者不同: find 是去硬盘找，locate 只在/var/lib/slocate资料库中找。locate的速度比find快，它并不是真的查找，而是查数据库，一般文件数据库在/var/lib/slocate/slocate.db中，所以locate的查找并不是实时的，而是以数据库的更新为准，一般是系统自己维护，也可以手工升级数据库
+【总结二】find, which,whereis,locate区别:
+(1) find 是直接在硬盘上搜寻，功能强大，但耗硬盘，一般不要用。常用于Shell脚本.
+(2) which只能查可执行文件和别名, 并在PATH变量中查找
+(3) whereis只能查二进制文件、说明文档，源文件等
+(4) locate和whereis都是查数据库/var/lob/slocate/slocate.db里的内容。比find快
+【which命令】
+ 
+【实例 | 技巧】
+which pwd                # 找出pwd的绝对路径
+which grep cut ls          # 查看多条命令， 一同显示
+【归纳 | 总结】
+【备注一】关于which命令的几点说明:
+	which命令的基本功能是查找可执行文件，主要是搜索命令所在目录
+	whereis命令不仅能搜索命令所在目录，还能搜索其帮助文档存储路径
+	whatis命令可以显示命令的简短信息，能够做什么用
+	/sbin和/usr/sbin主要放root用户命令
+	/bin和/usr/bin主要放置普通用户命令
+【whereis命令】
+ 
+【实例 | 技巧】
+whereis -b bash    # 只查找二进制文件路径
+whereis -m bash   # 只查找说明文件
+【归纳 | 总结】
+【备注一】关于whereis命令的几点说明:
+(1)	whereis也是搜索/var/lib/slocate/slocate.db数据库，相比find而言，速度快
+(2)	whereis与locate的区别在于:前者精确匹配，后者模糊查找，列出一串结果
+【总结一】whereis执行结果说明:
+(1) whereis的执行结果: whereis bash
+bash:/bin/bash  /etc/bash.bashrc  /usr/share/man/man1/bash.1.gz
+以上输出信息从左至右分别为查询的程序名、bash路径、bash的man手册页路径
+(2) 可以手工执行/usr/bin/updatedb命令来更新数据库
+【cksum命令】
+ 
+【实例 | 技巧】
+cksum A.tgz                # 计算A.tgz包的CRC
+cksum /bin/* > /bin.cksum  # 一旦/bin该目录下有任何文件改动，bin.cksum就会改动
+【归纳 | 总结】
+【备注一】关于cksum命令的几点说明:
+(1) CRC校验的标准由CCITT所指定，至少可检测出99.998%的已知错误
+(2) 经cksum进行校验后，该指令会返回校验结果供用户核对文件是否正确无误
+(3) 若指定的文件名为"-"， 则指令chsum会从标准输入中读取数据
+(4) 这个测试要求校验在源文件中和目的文件中各计算一次，然后比对两次校验结果
+(5) cksum(check and sum循环冗余) 和 md5sum(计算md5)用法类似
+【备注二】chsum, md5sum, sha1sum命令的主要用途:
+	用途一: 确保文件从一个系统传输到另一个系统地过程中没有被损坏
+	用途二: 检查文件或目录是否被改动过
+【总结一】cksum, md5sum, sha1sum:
+	cksum：计算文件的CRC校验码(循环冗余校验码)和字节数，使用较少
+	md5sum：计算和检查md5值；主要用于生成指纹，使用的比cksum多
+	sha1sum: 和md5sum都可用于哈希校验,加密效果更好一点,md5sum使用得更为广泛
+【dos2unix命令】
+ 
+【实例 | 技巧】
+dos2unix file                          # 转单个文本文件， 注意:可执行文件不用转换
+dos2unix file1 file2 file3                # 一次行转换多个文件
+dos2unix -k file                        #  保留源文件的时间戳
+dos2unix -n old_file  new_file         # 保留源文件，输出新文件
+cat test.txt | tr -d '\r' | cat -v           # 通过tr来删除, -v参数能显示^M字符
+cat  test.txt | sed  's:\r::' | cat -v      # 通过sed来删除
+dos2unix *.sh                        #  同类型的.sh脚本批量转
+find . -type f -exec dos2unix {} \;      # 多种文本文件，如何进行全部转换
+【归纳 | 总结】
+【备注一】为什么要用dos2unix
+Windows和Linux中文件的换行符的不同，导致文件间的一些兼容问题，Windows系统中用/r/n来表示换行，Linux中用/n来表示换行，Windows的文本文件，直接到Linux中使用可能会出错，因为多出了“/r”字符，具体表现就是每行后面有个字符^M，通过dos2unix 来将window的文本文件转换来适应Linux
+【总结一】dos2unix与unixtodos
+(1)	dos2unix: 将Windows下的文件转成适应Linux系统的文件
+(2)	unix2dos: 将Linux下的文件转成适应Windows系统的文件
+(3)	用法一致:  unix2dos filename
+(4)	备注: 目前阵列上没有unix2dos命令
+【file命令】
+ 
+【实例 | 技巧】
+file install.log               # 显示该文件的文件类型
+file -L /var/mail             # 显示连接文件指向文件的类型
+file /etc/*                   # 显示/etc目录下所有文件的文件类型
+file -s /dev/sd-[0-9][0-9]a    # 检查块文件，获取文件系统信息
+【归纳 | 总结】
+【备注一】Linux中的文件类型: 
+(1) 普通文件: 纯文本文件(ascii)，二进制文件(binary)，数据格式文件(data)
+(2) 目录文件(第一个字符为d的，类似于: drwxr-xr-x)
+(3) 字符设备和块设备(第一个字符为b, 比如ls -l /dev/sda, 第一个字符为c，字符设备)
+(4) 套接字文件(第一个字符为s，比如:mysql.sock)
+(5) 符号连接文件(第一个字符为l, 比如ls -l /var/mail)
+(6) 管道文件(FIFO, first in first out)
+【总结一】file命令作用:
+file命令的作用是用于检验文件的类型，并打印至终端。主要按以下顺序来完成：
+(1) 检验文件系统中支持的文件类型。
+(2) 检验magic file规则(如C文件，它会有#include字样；tar文件的前几个字节会有特殊的规则)
+(3) 检验文件内容的语言和字符集
+【umask命令】
+ 
+【实例 | 技巧】
+umask              # 获取当前的权限掩码, 0022，第一位是GID/UID，022(ugo)
+umask -S           # 以文字的方式来显示，比如说: u=rwx, g=rx, o=rx
+umask 002        # 拿others的权限属性去掉写(w)的权限
+【归纳 | 总结】
+【备注一】关于umask命令的几点说明:
+(1) 默认用户建立的文件的权限: 666(-rw-rw-rw)， 即没有执行的权限
+(2) 默认用户建立的目录的权限: 777(drwxrwxrwx)
+(3) 两个权限减去umask设置的权限掩码，就能得出文件和目录的实际权限
+(4) 基于安全方面的考虑，root的默认umask是022, 该设置可参考/etc/bashrc内容
+(5) 想更改整个系统全部默认的umask值，可以更改/etc/profile，一般不建议改
+【扩展 | 引申】
+【引申一】按照字符的方式来计算umask值:
+假如umask设置为003（即去掉others的写+执行权限）
+比如说: 默认文件权限666-003=663即others还具备wx权限，这是错误的。
+正确的计算:
+文件: (-rw-rw-rw-) - (-------wx)  = -rw-rw-r--
+目录: (drwxrwxrwx) - (-------wx) = drwxrwxr--
+【touch命令】
+ 
+【实例 | 技巧】
+touch file             # 修改file文件的时间为系统时间，若file不存在，则创建新文件
+touch /etc/nologin    # 系统维护期间禁止用户登录，但不限于SSH登录
+touch -c -t 201511301130.45 file  # 设定文件的时间戳, 不存在则不创建新文件
+touch -r /etc/passwd file          # 将后者的时间戳设置为前面的一样
+touch -a text                     # 修改文件的访问时间
+touch -d "11/30/2015" *.sh        # 统一修改shell脚本的时间戳为2015/11/30
+touch -d "10:18am 11/30/2015" text    # 2015年11月30日 上午10点18分
+touch file1 file2 file3                   #  同时创建多个文件
+touch -d "2 days ago" /etc/passwd     # 同样可以修改时间
+find /var -name * -exec touch {} \;      # 若发现系统文件时间都不对了，统一修改
+【归纳 | 总结】
+【备注一】-t选项的时间格式[[CC]YY]MMDDhhmm[.ss]说明:
+CC   表示世纪
+YY   表示年
+MM  表示月
+DD   表示日
+hh   表示小时
+mm  表示分钟
+ss    表示秒    
+比如: 201510281200.35  世纪20可有可无
+【总结一】touch命令的两个主要用途:
+主要用来创建新文件和修改创建时间
+(1) touch命令最主要用在创建新的空文件， 且用户必须拥有该目录下的写权限
+(2) 可以用默认当前时间来更新文件的访问时间和修改时间，也可以指定参数来更新
+【mkdir命令】
+ 
+【实例 | 技巧】
+mkdir emptydir                # 创建空目录文件
+mkdir dir1 dir2 dir3 dir4       # 同时创建多个目录
+mkdir -m 770 download       # 权限设置为u,g可读、写、执行，others无权访问
+mkdir -p dir1/dir2/dir3        # 递归创建多个目录，若dir1不存在，必须加-p参数
+mkdir -p /root/dir1/dir2/dir3   # 上例以相对路径，本例以绝对路径来创建目录
+mkdir -m=r-- dir1             # 创建并设置主，组，其他用户只只有读权限的目录
+【归纳 | 总结】
+【备注一】rmdir
+rmdir是remove directory的缩写; mkdir的反操作 rmdir -p dir1/dir2/dir3
+【备注二】一次性创建指定权限的工程目录实例
+ 
+【rm命令】
+ 
+【实例 | 技巧】
+rm -i file      # 在删除file文件时，先确认
+rm -f *.c      # 强制删除所有后缀为.c的文件
+rm -rf /test    # 强制递归删除/test目录下的所有子目录及文件
+【归纳 | 总结】
+【备注一】关于rm的几点说明:
+(1) 为安全起见，很多Linux版本默认有-i参数
+(2) 如果确定目录不要了，可以使用rm -rf来循环删除
+(3) 有时使用了参数 -f，但仍然会询问是否覆盖某文件，这是因为某些服务器，会默认增加别名 alias rm='rm -i',当执行cp操作时，实际执行的是 rm -i，该问题可以这样解决： vi ~/.bashrc,在alias rm='rm -i'前使用#注释掉即可
+【备注二】运用mv命令批量修改文件后缀示例:
+比如我们要批量修改后缀为.py的文件为，这个时候就需要用到mv命令
+ 
+实现脚本如下: 
+ 
+【mv命令】
+ 
+【实例 | 技巧】
+mv 2014.log 2015.log                  # 文件重命名，也是最常用的, 最好加i参数
+mv -t /tmp 2013.log 2014.log 2015.log  # 将三个文件移动到/tmp，注意目标文件放前面
+mv -v 2013.log 2014.log 2015.log /tmp  # 效果同上, 显示详细执行过程
+mv dir1 dir2             # 若dir2不存在，则将dir1命名；若已存在，则dir1下文件移动到dir2中
+mv -b file1 file2          # 若file2存在，在改名前会先备份，备份的文件名为file2~
+mv -i 2014.log 2015.log    # 将文件file1改名为file2，如果file2已经存在，则询问是否覆盖
+mv -u file1 file2            # file1比file2新则更新，否则更新失败
+【归纳 | 总结】
+【备注一】关于mv命令的几点说明:
+(1) Linux中覆盖和重命名的概念几乎是一样的，没有Windows中所谓的rename这一说法
+(2) 选项可以写在任意位置，可以mv f1 -v f2，也可以mv -v f1 f2，还可以mv f1 f2 -v
+【cp命令】
+ 
+【实例 | 技巧】
+cp ~/.bash_history /tmp/history    # 拷贝文件到/tmp目录下，并重命名
+cp /etc/file1 /etc/file2 /etc/file3  .  #  多文件拷贝文件到当前目录
+cp  -r /etc /tmp                   # 递归复制
+cp -a /var/log/wtmp wtmp_1       # 拷贝wtmp文件到本地，并保留所有属性
+cp -s wtmp wtmp_slink             # 对wtmp文件建一个快捷方式
+cp -l wtmp wtmp_hlink             #  建硬连接文件
+cp -i /etc/passwd passwd          # 源文件存在，拷贝之前会先询问
+cp -u ~/.bashrc  /tmp/bashrc     # 目标文件比源文件旧才更新，常用于shell脚本
+【归纳 | 总结】
+【备注一】拷贝时先要搞清楚下面几个问题:
+(1) 是否需要完整保留源文件的信息
+(2) 源文件是否为连接文件
+(3) 源文件是否为目录，如为目录，要用-r或-R参数
+PS: 拷贝时为防覆盖最好用-i参数提醒，或加个别名alias cp='cp -i'
+【scp命令】
+ 
+【实例 | 技巧】
+【从本地复制到远端 】scp 本地文件  远端用户@远端IP:远端文件夹
+scp /home/permitdir/A.tgz  admin@129.7.230.74:/home/permitdir/
+【从远端复制到本地】 scp 远端用户@远端IP:远端文件夹  本地文件
+scp -r admin@129.7.230.74:/home/permitdir/  /tmp/    # 递归拷贝目录
+【归纳 | 总结】
+【备注一】关于scp命令的几点说明:
+(1)	如远程服务器有为scp命令设置了指定的端口，需用-P参数设置命令的端口号 
+scp -P 1234 remote@server:/usr/local/sin.sh /home/administrator
+(2) 用户必须具有可读取远程服务器相应文件的权限，否则scp命令是无法起作用的
+(3) 一般能ssh就能执行scp的操作，它们用到时同一个端口，防火墙默认是打开的
+# iptables -I　INPUT -p tcp --dport 22 -j ACCEPT
+【备注二】cp和scp区别:
+(1) cp和scp前者是服务内部的拷贝，后者是服务器之间的拷贝, 比FTP安全
+(2) cp是copy的简写，是Linux服务器内部不同目录之间的复制
+(3) scp是Linux服务器基于SSH登录并进行安全的远程文件拷贝命令
+【paste命令】
+ 
+【实例 | 技巧】
+paste names scores                            # 合并多文件以列的方式
+paste -d":" names scores                       # 以冒号作为列与列的分隔符
+paste -s names scores                          # 将多行数据合并到一行
+cat /etc/group | paste /etc/passwd - | head -n 3  # 多文件合并
+【归纳 | 总结】
+【备注一】关于paste命令的几点说明:
+(1)  paste的拼凑原理和cut一样，行为正好相反，一个是切割，一个是合并
+(2)  paste命令在shell脚本中常于与cut,join,sed等组合使用
+示例如下:
+ 
+【cut命令】
+ 
+【实例 | 技巧】
+LANG="zh_CN.UTF-8"; date | cut -b 1-7,10-15   # 2015年09月
+date '+%D ' | cut -c 7-8  # 从输出21/12/15中截取年份15年， 注意区别-b参数，中文算一个字符
+head -n5 /etc/passwd | cut -d : -f 1,3-5  # 取第一列，第三，四，五列
+【归纳 | 总结】
+【备注一】cut命令主要接受三个定位方式:
+	第一: 字节(bytes) 选项-b
+	第二: 字符(chars) 选项-c
+	第三: 字段(fields) 选项-f
+PS: 如果域分割中含多个空格的话，用cut处理起来就比较麻烦
+【join命令】
+ 
+
+【实例 | 技巧】
+join file1 file2           # 两个文件交集，file1中的内容放置左侧，file2中的列右侧
+join -a1 -a2 file1 file2    #  两文件的并集
+join -v2 file1 file2        # 两文件的差集
+join -v1 v2 file1 file2     # 两个文件的对称差集
+join -j 1 file1 file2        # 指定第一列作为匹配字段，和上面等价
+join -o 1.1 2.2 file1 file2   # 显示第一个文件的第1列，第二个文件的第2列
+join -a1 file1 file2         # 在显示相关联的部分的同时，显示file1中不匹配的项
+join file1 file2 | join file3 - | join file4 -   # 将四个文件合并起来
+join -v 1 file1 file2                     # 将file1中不匹配的行列出
+join -t ':' /etc/passwd /etc/shadow     # 将两个文件以:分割，合并起来
+【归纳 | 总结】
+【备注一】关于join命令的几点说明:
+(1) 与paste命令相似，一个以特殊方式来合并两个文件的强有力工具，用法很像SQL
+(2) join一般用在特定的处理或用在Shell脚本中与cut,paste,sed,grep联合对文本进行处理
+【fold命令】
+ 
+【实例 | 技巧】
+fold -w 100 messages    # 将文件折叠成每行100字符显示，在文本处理或Shell有时有用.
+【colrm命令】
+ 
+【实例 | 技巧】
+colrm 4                          # 从第4列开始删除以后所有输入字符串
+colrm 4 6                        # 从标准输入中过滤掉第四列到第六列
+colrm 4 6 < filename             # 从输入文件中删除第四列到第六列
+colrm 4 6 < file1 > file2          # 过滤掉file1中第4~6列，输出到file2
+【归纳 | 总结】
+【备注一】关于colrm命令的几点说明:
+(1) colrm是column remove的简写，常用在shell中对文件进行处理
+(2) 如果文件包含tab和不可打印字符，可能会引起不可预期的行为
+示例如下:
+ 
+【comm命令】
+ 
+【实例 | 技巧】
+comm file1 file2                  # 默认以列的方式显示两个文件，和公共部分，以Tab分隔
+comm -12 file1 file2              # 求交集
+comm -3 file1 file2               # 删除公共部分，保留不同部分
+comm -23 file1 file2              # 差集，只包含文件1中独有的部分
+comm -13 file1 file2              # 差集，只包含文件2中独有的部分
+comm -3 file1 file2 | sed 's/^\t//'  # 将制表符（\t）删除，以便合并成一列
+【归纳 | 总结】
+【总结一】comm与diff命令区别:
+(1) 都可以用来比较两个文件内容
+(2) comm用于对有序文件进行比较
+(3) diff用于逐行比较列出其差异的详细信息，常用于补丁文件
+【备注一】comm命令在实际运用的示例:
+比如两个人名的文件，文件中都含Jerry； 接下来要删除公共部分，保留不用部分
+ 
+ 
+【patch命令】
+ 
+【实例 | 技巧】
+patch -p0 < /home/test/patch-3.1           # 安装补丁，在当前目录下打补丁
+patch -R -p1 < /home/test/patch-3.1        # 卸载补丁
+【归纳 | 总结】
+【总结一】打补丁的步骤：
+(1) 用diff工具比较新旧代码，生成patch文件；
+(2) 使用patch命令，将patch文件合并到原有代码；
+(3) 检查有无无法patch的文件，修改或重新选择是否对其做patch。
+(4) patch打完了就可以直接编译了。
+PS: p(n)一般取0,1,2 表示忽略前面的几层目录和/最左边部分,最好保证目录对齐
+【备注一】patch命令的简单示例：
+	准备数据，并用diff来生成补丁文件:
+ 
+	对name1打补丁，从而得到name2:
+ 
+	对name2打补丁，让其还原成name1: 
+【split命令】
+ 
+【实例 | 技巧】
+split -l 200 /var/log/messages        # 每200行拆分为一个小文件
+split -b 100k data                    # 把data文件按照每100k来拆分小文件
+split -b 100k data data_split_          # data_split_为输出文件的前缀
+split -b 100k data -d -a 3 data_split_   # -d参数 -a length指定后缀长度
+【归纳 | 总结】
+【备注一】关于split的几点说明:
+	适用场景: 大文件传输；大日志文件打开很耗系统资源，就要考虑用split来切割
+	常用命令: 用于切割常用split和csplit两个命令
+	制造数据: dd if=/dev/zero bs=1000M count=1 of=data
+【备注二】大文件拆分的实际例子: 
+	准备数据  dd if=/dev/zero of=data bs=100M count=1 
+	拆分数据  split -b 10m data -d -a 3 data_split_
+	合并数据  cat data_split_* > data
+	验证数据  md5sum data
+                                         
+【csplit命令】
+ 
+【实例 | 技巧】
+csplit file 100                    # 将file文件从100行为分界点，切割为2份;xx00, xx01
+csplit -n 3 file 100                # 将file从100行切割为两份，文件位数xx000,xx001
+csplit -n 3 -f file- file 100         # 输出为file-000, file-001
+csplit file 11 22 44               # file将切割成1-10行，11-21行, 22-43行,44行后，四个文件
+csplit -n 3 file 100 {*}            # 按每100行来分割，{*}按模式匹配，直至文件结尾
+csplit -f chap book /Chapter X/  # 按Chapter X来切割成两部分,chap00,chap01
+csplit -f chap book /Chapter X/+4   # 找到该关键字后4行才是分割点
+csplit -k -f prefix- file 1000 {10}      # 即使中断也保留文件
+【归纳 | 总结】
+【备注一】split与csplit:
+(1) 两者都是Linux下的拆分工具;split适用于常规拆分
+(2) csplit适用于特殊场合的拆分:不定长拆分，关键字匹配
+【备注二】csplit命令实例:
+server.log为准备的数据，使用csplit命令来切割:
+ 
+【cmp命令】
+ 
+【实例 | 技巧】
+cmp A.bin A.bin.bak       # 比较bak文件是否是原来文件的备份
+cmp -l A.bin A.bin.bak     # 标出所有不一样的地方， 以八进制显示
+cmp -s A.bin A.bin.bak     # 不显示任何信息。相同输出0，不同输出1， 错误输出2
+【归纳 | 总结】
+【备注一】关于cmp命令的几点说明:
+(1) 如两文件完全一致，无信息显示，若有差异标出第一个不同的字符和列数编号
+(2) cmp主要比较两个二进制文件，而diff主要比较两个文本文件
+(3) 执行cmp file1 file2命令，若出现下面这两种情况:
+	情形一:file1 file2 differ: char 23, line 6   
+>>>说明file1文件与file2文件内容在第6行的第23个字符开始有差异 
+	情形二:cmp: EOF on file1   若输出是这样的结果
+>>>说明file2前半部分与file1相同。但在file2中还有其他数据。
+【备注二】cmp命令在shell脚本中的常用示例:
+ 
+【diff命令】
+ 
+【实例 | 技巧】
+diff 2014.log 2015.log            # 比较两个文件，输出结果中c:改变 d:删除 a:添加
+diff -y -W 40 2014.log 2015.log   # 以并列的方式显示来差异文件，列宽为40
+diff -c 2014.log 2015.log         # 全文显示 !代表差异  +后文多出一行  -后文少了一行
+【归纳 | 总结】
+【备注一】关于diff脚本的几点说明:
+(1) diff&patch 常用在项目有BUG，但无权修改，就用diff生成补丁文件，供程序员打补丁
+(2) diff有很多功能平时我们不常用到，最常用的功能莫过于生成patch文件了
+(3) diff生成补丁文件最常用的参数-Naru
+ 
+
+
+【awk命令】
+ 
+【实例 | 技巧】
+last -n 5 | awk '{print $1 "\t" $3}'                    # 前5个登录账号，IP
+free -m | grep "Mem" | awk '{print $2}'           # 显示内存大小
+ifconfig eth0 | grep "inet addr:" | awk '{print $2}' | cut -c 6-     # 显示IP地址
+awk -f script.awk $INPUT_FILES                         # 另一种调用脚本方式
+awk '{v=FILENAME} !a[v]++1' *.log  >ALL.log   # 合并多为文件为一个
+cat /etc/passwd | awk -F: '{print $1 "\t" $7}'      # 输出用户对应的shell
+last | awk '{print $1 "\t lines:" NR "\t columns:" NF}'  # NR, NF运用
+cat /etc/passwd | awk 'BEGIN {FS=":"} $3<10 {print $1 "\t" $3}' #BEGIN
+cat /etc/passwd | awk '{FS=":"} $3<10 {print $1 "\t" $3}'  # 第一行默认空格
+awk -F: '/root/{print $1 "\t" $7}' /etc/passwd    # 按关键字搜索//放置在{}前
+awk '{max = $1 > $5 ? $1:$5 print max}' filename   # 三元表达式的运用
+awk '$3 ~/^d/ {print "Matched, OK!"}' inputfile   # 模式匹配
+awk '($1 > 10) && ($2 < 10) {print "OK"}' inputfile  # &&连接布尔表达式
+awk '/^d/  || /on$/ {print "OK"}' inputfile  # ||连接正则表达式
+cat /etc/passwd | awk '/^root/,/^admin/ {print $0}'  # root, admin之间的行
+awk '{print FILENAME,$0}' file*.txt > file_all    # 合并每个文件前面加文件名
+awk '{i=1;while (i<NF){print NF,$i;i++}}' /etc/passwd   # 通过while语句来实现循环
+echo -e "one two three four" | awk '{print $(NF-1)}'  # 取倒数第二个字段
+ps -ef | grep httpd | grep -v "grep" | awk '{print $2}' | xargs kill -9  # 杀掉所有httpd进程
+awk '{print $1}' access.log | sort | uniq -c | sort -nr | head -10 # 统计访问最多的前十个 IP 地址
+cat -n /etc/passwd | awk 'NR >= 10' | awk 'NR <= 20'  # 查看10行到20行
+awk -F'[,\t|]' '{print}' file         # 多个分隔符Tab，逗号，|
+Flag="Shell"; awk '{print '$Flag'}'     # 变量的使用
+awk '/^(yes|no)/{print}' file   # 打印开头为yes或者no开头的行
+echo | awk '{printf("hello word!n") > "datafile"}'   # awk允许这样输出文档
+【归纳 | 总结】
+【备注一】awk的三种调用方式:
+方式一: 命令行方式:awk [-F 分隔符]  'commands'  input-file(s)
+方式二: shell脚本方式: 首行添加#!/bin/awk
+方式三: 将awk命令插入一个文件然后调用：awk -f awk_file input-file(s)
+【备注二】关于awk命令的几点说明:
+(01) awk有三个不同版本:awk、nawk和gawk，一般指gawk，是AWK的GNU版本
+(02) awk取自Alfred Aho,Peter Weinberger和Brian Kernighan姓氏的首个字母
+(03) awk相比于sed，更趋向于分成数个字段来处理，适合处理小型数据.
+(04) {}中如有多个命令，以;来分隔
+(05) 逻辑运算中，等号务必使用==
+(06) awk中调用系统变量必须用单引号，如果是双引号，则表示字符串
+(07) 格式化输出时，在printf的格式设置中，务必加上\n才能换行
+(08) 与bash shell中的变量不同，在awk中变量可直接使用，不必加$符号 
+(09) 相比print，printf格式化字符串完全是C语言风格，代码更加清晰，易懂
+(10) awk把输入文件的数据读入内存， 然后操作该数据副本，awk不会修改输入数据内容
+(11) awk总是输出到标准输出，如果想输出到文件中，请使用重定向符
+(12) 相比于屏幕处理， 不会出现内存溢出或处理缓慢的情况，且可以格式化处理
+(13) NF与$NF区别: 前者是字段个数，后者是最后一个字段
+(14) && 和 ||可以连接两个/regexp/或者布尔表达式，构成混合表达式
+【总结一】匹配操作符:
+	匹配: value ~ /regrex/
+	不匹配: value !~ /regrex/
+【总结二】awk各项功能拆解:
+''      引用代码块
+BEGIN 初始化代码块，在对每一行进行处理之前，初始化代码，主要是引用全局变量，设置FS分隔符
+//     匹配代码块，可以是字符串或正则表达式
+{}     命令代码块，包含一条或多条命令
+；    多条命令使用分号分隔
+END  结尾代码块，每一行进行处理之后再执行的代码块，主要是进行最终计算或输出结尾摘要信息
+【ln命令】
+ 
+【实例 | 技巧】
+ln /etc/passwd /tmp/passwd-hd    # 建立passwd文件的硬连接，注意不加-s建立硬连接
+ln -is /bin /root/bin                # 为/bin目录建个软连接，即快捷方式，存在则提示
+【归纳 | 总结】
+【备注一】软链接和硬链接区别: 
+软链接：(Symbolic Link跟Windows下的快捷方式完全一样，因此:)
+	软链接以路径的形式存在。类似于Windows操作系统中的快捷方式
+	软链接可以跨文件系统，硬链接不可以
+	软链接可以对一个不存在的文件名进行链接
+	软链接可以对目录进行链接
+硬链接：(Hard Link:是在同一分区下建立的数据关联，因此:)
+	硬链接以文件副本的形式存在。但不占用硬盘实际空间
+	不允许给目录创建硬链接
+	硬链接只有在同一个文件系统中才能创建，不能跨文件系统
+【备注二】软链接和硬链接使用实例: 
+ 
+【扩展 | 引申】
+【引申一】Linux下文件的读取方式:
+第一步: 先通过一层一层的目录获取文件相关的关联数据
+第二步: 再到对应的inode获取文件属性，以及文件内容数据所在的块。
+第三步: 最后到块区域获取文件的数据。
+硬连接只是在某个目录下新增一个该文件的关联数据，比如:/root/crontab为一个硬连接文件，它连接到/etc/crontab文件,也就是说/root/crontab与/etc/crontab是同一个文件，只是有两个目录(/root与/etc)记录了crontab文件的关联数据。
+/root/crontab  --> 某处(crontab的inode和块)
+/etc/crontab    --> 某处(crontab的inode和块)
+无论删掉/etc或/root下的crontab,都不会改变crontab的inode和块! 这样做的唯一好处就是:安全.
+
+
+
+
+【chown命令】
+ 
+【实例 | 技巧】
+chown -v admin install.log            # 将该文件的拥有者更改为admin
+chown :qq /home/qq                 # 将qq目录的组更改为qq组
+chown -R www:www /home/www/*   # 第一个www表示拥有者，第二个表示群组
+【chmod命令】
+ 
+【实例 | 技巧】
+chmod +x /script/*.sh           # 设置所有脚本具备可执行的权限
+chmod a+x file                  # 将file文件设置为都可读的权限
+chmod ug+w, o-w file1 file2     # 设置文件拥有者，群组可写权限，其他人不可写权限
+chmod 771 file                  # 用数字的方式来设置权限
+chmod ug=rwx, o=x file          # 和上面的效果一致
+chmod -R a+r *                  # 当前目录下的所有子目录与文件可供任何人读取
+chmod a-x file                   #  收回任何用户对file的执行权限
+chmod 4777 file                 # 设置用户ID，给属主，组，其他用户分配读、写和执行权限
+【归纳 | 总结】
+【备注一】chmod的几点说明:
+(1) 有只读权限的用户不能用cd进入该目录：还必须有执行权限才能进入
+(2) 有执行权限的用户仅在知道文件名，并拥有读权利才能访问目录下的文件
+(3) 必须有读和执行权限才可以ls列出目录清单，或使用cd命令进入目录
+(4) 有目录的写权限，可以创建、删除或修改目录下的任何文件或子目录
+(5) 除了以上基本的用户权限外，还有setuid、setgid和粘滞位等设置
+【备注二】权限模式说明:
+	u(user:文件拥有者) 
+	g(group:文件归属组) 
+	o(others:其他) 
+	a(all: 所有都是) 
+	s(special:特殊权限, 设置用户或组的ID号) 
+	l(lock:文件加锁其他人无法访问) 
+	t(粘着位,防止文件被非属主删除)
+【备注三】chmod命令常用实例:
+ 
+【chgrp命令】
+ 
+【实例 | 技巧】
+chgrp -v admin /var/log/messages     #  改变messages文件的群组，并显示执行过程
+chgrp --reference=file1 file2           #  更改file2的群组和file1一样
+chgrp -R 0 testDir        #  将testDir目录下的所有文件和目录更改为群ID为0的群组
+chgrp --dereference mysql link_file    # 将目标文件而非连接文件组设置为mysql
+【归纳 | 总结】
+【备注一】关于chgrp命令的几点说明:
+(1) chgrp命令要变更的组名必须存在于/etc/group
+(2) 只有root账号才有执行该命令的权限，所以执行时，要用sudo命令
+
+2	文档编辑
+【grep命令】
+ 
+【实例 | 技巧】
+grep root /etc/passwd  # 查找含root账号的行
+grep -r root /etc  # 递归查找/etc目录下，含root字符串的文件
+ps -ef | grep -i httpd | grep -v -n "grep" # 查找httpd进程并输出符合条件行数
+cat /OSM/conf/versions.conf | grep -A 4 "BIOS" # 输出匹配行及后四行
+grep -n -v '^$' file       # 显示所有非空行，并标出编号
+ls -lart | grep "^[^d]"  # 查询当前目录下不为目录的所有文件
+echo "This is test line."  | grep -E -o "[a-z]+\."  # 匹配到line.
+seq 10 | grep "5" -C 3  --color   # 5前后三行，并以颜色显示
+grep -q "test" file  # 不输出任何信息，成功则返回0，一般用于条件测试
+echo this is a text line | grep -e "is" -e "line" -o  # 匹配多个模式
+grep "main()" . -r --include *.{php,html}  # 当前目录中.php和.html文件中递归搜索字符"main()"
+grep "main()" . -r --exclude "README"  # 在搜索结果中排除所有README文件
+grep "main()" . -r --exclude-from filelist  # 在搜索结果中排除filelist文件列表里的文件
+cat /etc/passwd | grep -m 1 "root"       # 最大只匹配一次，找到为止
+ps -ef | egrep "(sshd|httpd)"             # 查看进程中含sshd或者httpd的进程
+【归纳 | 总结】
+【备注一】grep，egrep:
+(1) grep：在没有参数的情况下，只输出符合RE（Regular Expression）字符
+(2) egrep：等同于grep -E，和grep最大的区别就是表现在转义符上比如grep做次数匹配时\{n,m\}egrep则不需要直接{n，m}。egrep方便，快捷
+【备注二】grep常用匹配:
+	grep ok file          # 匹配'book'、'okey'、'ok'等
+	grep '\<ok' file       # 匹配'ok'和'okey'等价于$ grep -E '^ok'
+	grep '\<ok\>' file     # 只匹配ok，等价于$ grep -w ok file
+【总结一】常用的国际模式匹配:
+[[:upper:]]    大写字母A-Z   例如: $ grep [[:upper:]] /etc/passwd
+[[:lower:]]    小写字母a-z
+[[:digit:]]    数字0-9
+[[:alnum:]]    字母，数字0-9A-Za-z
+[[:space:]]    空格或TAB
+[[:alpha:]]    字母A-Za-z
+【总结二】grep中常用正则表达式:
+^         锚定行的开始 如：'^grep'匹配所有以grep开头的行
+$          锚定行的结束 如：'grep$'匹配所有以grep结尾的行
+\<        锚定单词的开始，如:'\<grep'匹配包含以grep开头的单词的行 
+\>        锚定单词的结束，如'grep\>'匹配包含以grep结尾的单词的行
+.          匹配任意一个字符； 如：'gr.p',可匹配grp, grep等.
+*          匹配零个或多个先前字符; .*一起用代表任意字符, 
+[]          匹配一个指定范围内的字符，如'[Gg]rep'匹配Grep和grep
+[^]        匹配一个不在指定范围内的字符，如：'^[^d]匹配一个开头非d的行
+\(..\)       标记匹配字符，如'\(love\)'，love被标记为1
+x\{m\}     重复字符x，m次，如：'o\{5\}'匹配包含5个o的行。 
+x\{m,\}    重复字符x,至少m次，如：'o\{5,\}'匹配至少有5个o的行。 
+x\{m,n\}   重复字符x，至少m次，不多于n次，如：'o\{5,10\}'匹配5-10个o的行
+\w        匹配文字和数字字符，也就是[A-Za-z0-9]
+\b        单词锁定符，如: '\bgrep\b'只匹配grep
+【tr命令】
+ 
+【实例 | 技巧】
+echo "hello world" | tr a-z A-Z             # 大小写转换，输出HELLO WORLD
+tr -s "[a-z]" < input > output              # 删除input文件中重复的小写字符
+tr -s "[\r]" "[\n]" < file                     # 删除Windows/DOS下的^M, 用换行替代
+echo "Hello World" | tr -d "Helo"          # 删除指定字符H, e, l, o输出为Wrd
+echo $PATH | tr ":" "\n"                   # 将$PATH的:变成回车
+echo "Hello,2015" | tr -c "0-9" "*"         # 将所有非数字字符用*替代
+echo "Year is 2015" | tr -cd [:digit:]        # 移调所有非数字字符
+cat plan.txt | tr -s "\n"                    # 可删空行
+【归纳 | 总结】
+【备注一】关于tr命令的几点说明:
+(1)	tr(translate)命令是sed命令的简化版，tr命令能实现的功能， sed都能实现
+(2)	[a-zA-Z0-9]: a-zA-Z内的字符组成的字符串和0-9组成的数字串
+(3)	[O*n]:       表示字符O重复出现指定次数n, 比如[O*2]匹配OO
+【备注二】 tr命令很容易搞错的一个地方:
+echo "backup abc file" | tr "abc" "xyz"   # 它并不是将abc替换成xyz，而是
+a --> x      a用x来替换
+b --> y      b用y来替换
+c --> z      c用z来替换
+【备注三】 tr命令使用实例:
+ 
+【wc命令】
+ 
+【实例 | 技巧】
+wc -lwc file1 file2                   # 统计两个文件的行数，单词数，字符数;和省略lwc参数相当
+ls -l | wc -l                               # 统计当前目录下的文件数，目录数
+cat /OSM/conf/versions.conf | wc         # 统计该文件中有多少行，多少单词，多少字符
+last | grep [a-zA-Z] | grep -v "wtmp" | wc -l # 统计最近一个月登陆用户数
+cat /etc/passwd | wc -l                    # 统计系统有多少账号
+find / -name "*.sh" | xargs cat | grep -v "^$" | wc -l   # 统计所有shell脚本行数，去空行
+【expr命令】
+ 
+【实例 | 技巧】
+expr length "Hello World"     # 计算字符串长度
+expr substr "Hello World!"     # 截取子字符串
+expr match "hi,2015" hi.*      # 输出匹配到的个数
+expr quote "str"              # 字符串重现
+expr index "Hello World!" o   # 取第一个出现字符的索引
+tag=0; tag=`expr $tag + 1 `   # 用于Shell循环中增量运算
+expr 4 - 1                    # 整数求差+ - /同样运算
+expr 8 /* 3                     # 整数求积, 注意要转义
+expr 8 % 3                     # 取余运算
+expr "hello" : ".*"               # 通过这种方式可计算字符串的长度
+【归纳 | 总结】
+【备注一】expr命令的几点说明:
+(1) expr最大作用是四则运算和字符串操作，但必须是整数的四则运算
+(2) expr只适合整数运算，涉及到浮点数的，可以用下面方式来处理：
+var=2
+var=`echo "scale=1;$var*2.0" | bc` # bc预设输出整数，用scale 指定小数点位数
+echo $var
+【总结一】expr,let,bc命令比较:
+(1) 在shell 中$() 与 ``等效。执行中间包含的命令语句，返回执行结果
+(2) 效率:let==(()) > expr > bc; let和(())运行是内建命令，使用相同的算法
+(3) let和expr的运算是整数运算，不包括浮点预算
+(4) expr和bc是外部程序，bc的体积几乎为expr的3倍，载入内存消耗的时间也大
+(5) 从运算能力来说，bc排第一位
+【扩展 | 引申】
+【引申一】通过expr命令来判断变量是否为整数:
+ 
+【引申二】通过expr命令来判断输入值:
+ 
+【引申三】通过expr命令的模式匹配功能取文件名:
+VAR=file.doc ;expr $VAR : "\(.*\).doc" 
+# expr通过制定冒号选项计算字符串字符数，.*指任意字符重复多次; 输出:file
+【引申四】通过expr命令来获取取连接文件:
+lrwxrwxrwx 1 root root  18 2015-11-21 23:45 file1 -> /file2 
+所以 expr "$ls"  :  '.*-> \(.*\)$' 
+会返回 -> 后面的字符串,在这里也就是 /file2 
+实际上就是找到一个软链接所链接到的文件   
+【sort命令】
+ 
+【实例 | 技巧】
+sort /etc/passwd    # 按ASCII排序，首字符1..10，这往往不是我们想要的
+sort -M -u file        # 按月份来排序并去重
+sort -n file1 file2 -o sorted.file       # 自然数升序排序后输出
+ls -lart | sort -k5 -nr                        # 获取目录下文件大小的顺序
+ps aux | sort -k6 -nr | head -n 10   # 获取当前系统中运行最耗内存的10个进程
+cat /etc/passwd | sort -t ':' -k 3      # 以冒号分隔，以第三列来排序
+cat /etc/passwd | sort -t ':' -k3nr    # 倒序排列，默认是顺序排序
+cat /etc/passwd | sort -t':' -k 6.2,6.4 -k 1r  #先第六域第2-4个字符正向排序，再第一个域反向排序
+cat /etc/passwd |  sort -t':' -k 7 -u  # 对/etc/passwd的第七个域进行排序，然后去重
+sort -t . -k 1,1n -k 2,2n -k 3,3n -k 4,4n /etc/hosts    # 基于ip地址对文件排序
+history | sort -k4 | awk '{print $4}' | uniq -c | sort -k1nr | head -n5  # 获取最常用的5的命令
+【归纳 | 总结】
+【备注一】关于sort命令的几点说明:
+(1) +1 -1  指定的栏位来排序，已属于旧格式，目前最常用的还是-k方式
+(2) 要在 LC_ALL、LC_COLLATE 或 LANG 环境变量配置为 En_US 的情况下排序
+(3) LANG=En_US; export LC_ALL=C
+(4) 重定向问题，用sort file > file 达不到目的，要么-o参数；要么重定向另外一个文件
+(5) 注意-k分隔字段 2与2,2区别sort -t "|" -k 2 text   
+1|101|2  
+1|10|2  
+sort -t "|" -k 2,2 text   
+1|10|2  
+1|101|2
+(6) 多条件排序;-k 2,2n –k 3,3nr；先按照第二列升序，再按照第三列降序
+(7) sort -n -k 2.2,3.1 facebook  第二列第2字符到第三列第1字符，不包括第三字段
+【uniq命令】
+ 
+【实例 | 技巧】
+cat file | sort | uniq -dc         # 显示重复行的重复次数
+uniq -u filename               # 显示不重复的行
+uniq -f3 /var/log/messages    # 跳过前三个字段, f可以和数字连在一起
+uniq -f 2 -s 2 file             # 跳过前两个字段和后两个字符
+【归纳 | 总结】
+【备注一】关于uniq命令的几点说明:
+(1) 需要注意的地方是uniq只对相连的行进行处理，所以一般情况下要先进行sort操作 
+(2) uniq命令的常用三个参数-d,-u,-c
+【nl命令】
+ 
+【实例 | 技巧】
+nl /etc/passwd                   # 列出passwd的内容
+nl -b a /etc/passwd              # 列出passwd 的内容，空本行也加上行号
+nl -b a -n rz /etc/passwd         # 让行号前面自动补上0,统一输出格式
+nl -b a -n rz -w 3 /etc/passwd     # 让行号以三位宽度显示
+【归纳 | 总结】
+【备注一】关于nl命令的几点说明:
+	nl -b a -n rz 命令行号默认为六位，要调整位数可以加上参数-w 3调整为3位
+	nl命令在linux系统中用来计算文件中行号。nl可以将输出的文件内容自动的加上行号！
+	nl不同于cat -n， nl可以将行号做比较多的显示设计，包括位数与是否自动补齐0等等的功能
+【sed命令】
+ 
+【实例 | 技巧】
+【读取】：r命令
+sed '/test/r file' example               # file里的内容被读进来，显示在与test匹配的行后面
+【替换】：s命令 
+sed 's/test/mytest/g' example          # 在整行范围内把test替换为mytest
+sed -n 's/^test/mytest/p' example      # 只打印那些行开头的test被替换成mytest的行
+sed 's/^Hi,/& Tom/' example           # 所有以Hi,开头的行都会被替换成Hi, Tom
+【删除】：d命令
+sed '2d' file          # 删除file文件的第二行
+sed '2,$d' file        # 删除file文件从第二行到末尾的所有行
+sed '$d' file         # 删除file文件的最后一行
+sed '/test/d' file     # 删除file文件包含“test”的行
+【范围】：逗号
+sed -n '/test/,/check/p' example   # 打印test和check之间的行
+sed -n '5,/^test/p' example       # 打印从第五行开始到第一个包含以test开始的行之间的所有行
+【编辑】：e命令
+sed -e '1,5d' -e 's/test/check/' example   #第一条命令删除1至5行，第二条命令用check替换test。命令的执行顺序对结果有影响;如果两个命令都是替换命令，那么第一个替换命令将影响第二个替换命令的结果。
+【写入】：w命令
+sed -n '/test/w file' example   #在example中所有包含test的行都被写入file里。
+【追加】：a命令
+sed '/test/a\insert' sed.txt  #在匹配test行后面增加一行insert
+【插入】：i命令
+sed '/test/i\insert' sed.txt  #在匹配test行前面增加一行insert
+【转换】：y命令
+sed '1,10y/abcde/ABCDE/' example  
+# 把1到10行内所有abcde转变为大写，注意，正则表达式元字符不能使用这个命令。
+【下一个】：n命令
+sed '/test/{ n; s/aa/bb/; }' example   #如果test被匹配，则移动到匹配行的下一行，替换这一行的aa，变为bb，并打印该行，然后继续。
+【保持和获取】：h命令和G命令
+sed -e '/test/h' -e '$G' example  # 任何包含test的行都被复制并追加到该文件的末尾
+【保存和互换】：h命令和x命令
+sed -e '/test/h' -e '/check/x' example    # 把包含test与check的行互换
+【归纳 | 总结】
+【备注一】关于sed命令的几点说明:
+1. 不论什么字符，紧跟着s命令的都被认为是新的分隔符。
+2. sed是基于行的，因此按顺序对每一行执行命令。sed将其结果写入标准输出，不修改任何输入文件
+3. sed内部有两个空间，模式空间和保留空间。模式空间是对外用的，用于读取外部文件；保留空间是内部用的，用于暂存文本数据。常规处理只用到模式空间，sed将文件以行为单位读入模式空间内处理即可。
+4. sed浏览输入文件时，缺省从第一行开始，两种方式定位：
+	用行号，可以是一个简单数字，或是一个行号范围
+	使用正则表达式
+5. 尽可能使用字符类是很有利的，他们可以更好的适应非英语locale
+6. 当匹配正则表达式时，须注意正则表达式是按照最长匹配，即贪婪匹配
+【vi命令】
+ 
+ 
+【归纳 | 总结】
+ 
+ 
+ 
+【扩展 | 引申】
+ 
+
+
+3	磁盘管理
+【cd命令】
+ 
+【实例 | 技巧】
+cd ..                # 返回上一层工作目录
+cd ~                # 返回当前用户的家目录, 等价于cd $HOME
+cd                  # 也是返回当前用户的家目录，只是不带任何参数
+cd /var/spool/mail   # 切换工作目录到...
+cd ../../              # 进入上两层目录
+cd ../cur_debug/     # 切换到同级目录
+cd ~root            # 切换到root账号的家目录
+cd -                 # 切换到前一次工作目录
+【归纳 | 总结】
+【备注一】关于cd命令的几点说明:
+(1) chang directory，cd 切换工作目录, 是Linux中最基本的命令
+(2) cd tmp\ dir       # 进入带空格的目录，用反斜杠来转义
+(3) cd /etc/init.?     # 如果不知道具体名，又不想用TAB的话
+(4) cd /etc/init.*     # 用*其实效果和用?相似
+【df命令】
+ 
+【实例 | 技巧】
+df -h              # 以可读的方式来显示文件系统的磁盘使用情况
+df --total -ah      # 显示最后输出各列的合计,-a会显示虚拟文件系统，其大小为0
+df -t ext3 -t ext4   # 显示指定类型的磁盘的使用情况
+df -Th -x tmpfs     # 列出文件系统的类型，并排除tmpfs
+【归纳 | 总结】
+【备注一】虚拟文件系统几点说明:
+(1) 虚拟文件系统是指没有相对应的物理设备的假文件系统
+(2) 用-a参数可以显示虚拟文件系统,大小为0，加载于内存中
+(3) 常用的虚拟文件系统有: cgroup,udev,proc,sys,tmpfs,devpts
+(4) 优点:因加载于硬盘中，访问速度快。 缺点:数据容易丢失
+【备注二】df命令查看信息解析:
+ 
+	第1列是代表文件系统对应的设备文件的路径名,一般是硬盘上的分区
+	第2列给出分区包含空间大小
+	第3列表示已用的数据块数目
+	第4列表示可用的数据块数目
+	第5列表示使用空间的百分比
+	第6列表示文件系统的挂载点
+第3，4列块数之和不等于第2列中的块数。这是因为缺省的每个分区都留了少量空间供系统管理员使用。即使遇到普通用户空间已满的情况，管理员仍能登录和留有解决问题所需的工作空间。清单中Use% 列表示普通用户空间使用的百分比，即使这一数字达到100％，分区仍然留有系统管理员使用的空间。
+【总结一】du与df命令的区别:
+(1) du(disk usage):用户级命令;通过搜索文件来计算每个文件的大小然后累加，du能看到的文件只是一些当前存在的，没有被删除的。大小就是当前存在的所有文件大小的累加
+(2) df(disk free):系统级命令;通过文件系统来快速获取空间大小的信息，当我们删除一个文件的时候，这个文件不是马上就在文件系统当中消失了，而是暂时消失了，当所有程序都不用时，才会根据OS的规则释放掉已经删除的文件， df记录的是通过文件系统获取到的文件的大小，他比du强的地方就是能够看到已经删除的文件，而且计算大小的时候，把这一部分的空间也加上了，更精确了。inode节点，磁盘分布图，间接块，超级块等，这些Meta Data对用户级是不可见，但对系统级用户是可见，必须考虑的。
+(3) 当文件系统也确定删除了该文件后，这时候du与df就一致了
+【总结二】使du与df一致的解决方案:
+lsof | grep delete    # 找到相应的进程号
+kill -9 <PID>        # 此时,使用df与du的命令,结果大致相同.
+【du命令】
+ 
+【实例 | 技巧】
+du -sh  .                      # 以方便的方式显示当前目录的占用情况
+du --max-depth=1 -h /etc      # 输出/etc目录及各个子目录所使用的空间
+du -sh /tmp/* | sort -nr | head  # 前十占用空间最大的，便于清理
+du --exclude="*test*"          # 列出当前目录中不包含test目录的大小
+【归纳 | 总结】
+【备注一】关于du与df命令的几点说明:
+(1) du查看目录大小，统计文件大小相加，df查看磁盘使用情况，统计数据块使用情况
+(2) du是面向文件的命令，只计算被文件占用的空间。不计算文件系统metadata 占用的空间
+(3) df是基于文件系统总体来计算，通过文件系统中未分配空间来确定系统中已经分配空间的大小
+(4) df获取硬盘占用了多少空间，还剩下多少空间，显示所有文件系统对i节点和磁盘块使用情况
+【备注二】使用fuser -u命令真正清除已删除空间:
+如果有一个进程在打开一个大文件的时候,这个大文件直接被rm或者mv掉，则du会更新统计数值，df不会更新统计数值,还是认为空间没有释放,直到这个打开大文件的进程被Kill掉。假如:我们定期删除/tmp下面的文件，但是没有杀掉其进程，所以空间一直没有释放。使用下面的命令杀掉进程之后，系统恢复。 fuser -u /tmp
+【备注三】du命令实际运用示例:
+查看/tmp目录下4个占用空间最大的文件或目录:
+ 
+【tree命令】
+ 
+【实例 | 技巧】
+tree                    # 最常用，以树状图列出当前目录结构
+tree -af                # 显示文件和目录的完整路径
+tree -t                 # 以文件和目录的更改时间排序
+tree --charset ASCII     # 防中文乱码的输出方式
+tree -L 1               # 只列出第一级的目录和文件
+tree -L 2 -d > tree.txt   # 列出两级目录和文件并重定向
+【归纳 | 总结】
+【总结一】以tree命令为例介绍Linux下包的编译步骤:
+如果执行tree命令发现，命令没找到的话，说明该命令需要单独安装
+$ tree 
+-bash: tree: command not found
+对于ubuntu系统: apt-get install tree; 对于linux系统: 可以用:wget命令
+$ wget ftp://mama.indstate.edu/linux/tree/tree-1.5.3.tgz 
+# 来下载最新的tree命令源代码压缩包。
+$ ls -l tree-1.5.3.tgz 
+-rw-r--r--    1 root     root        34494 12月  3 20:56 tree-1.5.3.tgz
+$ tar zxf tree-1.5.3.tgz 
+$ cd tree-1.5.3 
+$ ls 
+CHANGES  INSTALL  LICENSE  Makefile  man  README  strverscmp.c  tree.c
+$ make 
+gcc -ggdb -Wall -DLINUX -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64   
+$ cp -af tree /usr/bin 这样tree命令就可以用了
+使用示例:
+ 
+【ls命令】
+ 
+【实例 | 技巧】
+ls /bin        # 列出bin目录下所有子目录
+ll -h | less     # 分页方式详细列出了文件文件信息，ll相当于ls -l
+ls -ltr *.sh     # 列出当前目录下所有的.sh文件，越新的排越后面
+ls -lR  /bin   # 列出bin目录下所有子目录及文件的详细信息
+ls -AF        # 列出当前目录下所有文件及目录，目录名称后加/，文件名后加*
+ls -l * | grep "^-" | wc -l  # 计算当前目录下的文件数量
+ls -lart                  # 按修改时间升序，并逆序排列
+ls -lact                  # 按创建时间升序，并逆序排列
+ls -lau                  # 按访问时间升序
+$ find . name *.sh | xargs ls - lart  # 查到后按访问时间升序排列
+$ ls --hide=*.py                 # 不列出.py结尾的文件，隐藏起来了
+$ ls -Slr                         # 按照文件大小反向输出文件
+$ ls -m                          # 所有文件名以逗号隔开，填满整行行宽，导成csv文件有用
+$ ls -l /bin | grep "^d"           # 列出子目录的详细情况
+$ ls -F /bin | grep /$              # 列出/bin目录下的子目录
+$ find $PWD | xargs ls -ld         # 递归列出当前目录下的所有文件的绝对路径
+$ find $PWD -maxdepth 1 | xargs ls -ld # 区别上例，对目录不递归
+$ ls -tl --time-style=full-iso            # 指定文件时间输出格式
+【归纳 | 总结】
+【备注一】Linux下文件的一些文件颜色的含义:
+(1). 绿色---->代表可执行文件
+(2). 红色---->代表压缩文件
+(3). 深蓝色---->代表目录
+(4). 浅蓝色----->代表链接文件
+(5). 灰色---->代表其它的一些文件
+【备注二】Linux的文件类型:
+(1)“-”代表普通文件
+(2)“d”代表目录
+(3)“l”代表连接文件
+(4)“b”代表设备文件
+(5)“s”代表套接字文件
+ 
+【备注三】ls结合sed命令批量修改配置文件的目录的示例:
+ 
+【pwd命令】
+ 
+【实例 | 技巧】
+pwd           # 不加参数，最常用用法，显示完整工作目录路径
+pwd -P        # 显示真实目录路径，而非连接路径 
+pwd -L        # 若有连接路径，则显示连接路径
+echo "Current work dir: $PWD, the same as $(pwd), the previous Dir:$OLDPWD"
+【归纳 | 总结】
+【备注一】关于pwd命令的几点说明:
+(1) mkdir来创建目录，cd进入指定的目录，pwd显示完整的目录
+(2) 常用参数-P,-L 有时候需要注意是真实目录还是连接目录
+
+【mount命令】
+ 
+【实例 | 技巧】
+mount -a                               # 挂载所有在/etc/fstab, /etc/mtab两个配置中的内容
+mount -o remount,rw /dev/sda1         # 重新加载/dev/sda1为可读写权限
+【光盘镜像文件的挂载】
+mount -o loop -t iso9660 /home/test/mydisk.iso /mnt/vcdrom
+【移动硬盘的挂载】
+mount -t ntfs /dev/sdc1 /mnt/usbhd1
+mount -t ntfs -o iocharset=cp936 /dev/sdc1 /mnt/usbhd1    # 文件名为汉字可以用这个命令
+【U盘的挂载】
+mount -t vfat /dev/sdd1 /mnt/usb
+【Windows文件共享的挂载】
+mount –o username=admin,password=123,iocharset=utf8//10.140.133.23/c$ /mnt/samba  
+#admin和123 是10.140.133.23 Windows主机的用户名和密码，c$是这台计算机的一个磁盘共享名
+【归纳 | 总结】
+【备注一】关于mount命令的几点说明:
+(1) 确保当前目录不在挂载点，否则mount或unmount都不会成功，会提示device is busy
+(2) 想卸载某设备的语法是umount目录名，例如umount /mnt/cdrom等
+(3) mount命令没有建立挂载点的功能，因此应该确保执行mount命令时，挂载点已经存在
+(4) Windows网络共享的核心是SMB/CIFS，在Linux下要挂载Windows的磁盘共享，就必须安装和使用samba软件包
+(5) 在linux客户端挂载NFS磁盘共享之前，必须先配置好NFS服务端
+【扩展 | 引申】
+【引申一】挂载设备需要的其他命令:
+$ mkdir -p /mnt/vcdrom   # 建立目录作为挂载点
+$ fdisk -l                  # 查看硬盘和硬盘的分区情况
+$ more /proc/partitions    # 同上
+$ cat /proc/filesystems     # 查看系统支持的文件类型
+【引申二】制作光盘镜像文件:
+将光盘放入光驱，执行下面其中之一的命令就可以:
+	$ cp /dev/cdrom /home/root/disk.iso
+	$ dd if=/dev/cdrom of=/home/root/disk.iso
+
+
+4	磁盘维护
+【badblocks命令】
+ 
+【实例 | 技巧】
+badblock -s -v /dev/sda1                       # 扫描硬盘分区/dev/sda1
+badblocks -b 4096 -c 1 /dev/sda -o /tmp/result  # 检查保险箱盘
+【归纳 | 总结】
+【总结一】:Linux服务器如果让系统不使用损坏扇区或区块:
+	步骤1: 使用fdisk命令识别硬盘信息:  fdisk -l
+	步骤2: 扫描硬盘的损坏扇区或区块:  badblocks -v /dev/sda > /tmp/bad-blocks.txt
+	步骤3: 提示操作系统不要使用损坏区块存储:  e2fsck -l /tmp/bad-blocks.txt  /dev/sda
+PS: 在运行e2fsck命令前，请保证设备没有被挂载
+【dd命令】
+ 
+【实例 | 技巧】
+dd if=/dev/sda of=/root/image count=1 bs=512     # 将sda盘的MBR信息备份
+dd if=/dev/zero of=/dev/sda bs=100M count=100   # 对系统盘做毁灭性测试
+dd if=/dev/sda | gzip> /tmp/back.gz                # 备份且压缩后放置到指定目录
+gzip -dc /tmp/back.gz | dd of=/dev/sda             # 将压缩的备份文件恢复到指定盘
+dd if=/dev/urandom of=/dev/sd-68a bs=1M count=10    # 利用随机数据下IO
+time dd if=/dev/zero of=/tmp/file bs=1M count=100      # 用来测试纯写速度
+time dd if=/tmp/file of=/dev/null bs=1M count=100      # 用来测试纯读速度
+dd if=/dev/sda of=/dev/sda                             # 该命令用来修复长久未使用的硬盘
+dd if=/dev/zero of=/tmp/test bs=100M count=1         # 创建一个100M的空文件用来测试
+dd if=/etc/passwd of=/tmp/back                         # 用于拷贝文件
+dd bs=512 count=100000 if=/dev/sda | gzip -9 > ghost.img.gz  # 系统克隆
+【归纳 | 总结】
+【备注一】dd几种输入设备:
+(1)	/dev/null: 空设备，类似于Windows下的垃圾桶.of=/dev/null不产生IO，用来测试纯读速度
+(2)	/dev/zero: 零设备, 提供无穷尽的0字符串，if=/dev/zero不产生IO，用来测试纯写速度
+(3)	/dev/urandom:随机设备,if=/dev/urandom; 用来测试随机IO
+【备注二】dd命令的几点说明:
+(1) /dev/sda:          SCSI硬盘 
+(2) /dev/hda:          IDE硬盘
+(3) /dev/mapper/sda:  LVM分区
+(4) 用dd制造文件的，文件大小不能超过内存大小，bs*count小于分区硬盘容量
+【备注三】dd命令的实际运用中的示例:
+ 
+【总结一】dd与cp区别:
+	cp: copy，复制文件和目录,支持多个文件或目录拷贝。只拷贝文件本身的属性或特性
+	dd: disk dump, 拷贝数据块；只把数据从一处拷贝到另一处，不支持多个文件或目录
+【总结二】使用dd命令精确测试写速度和延迟:
+$ dd if=/dev/zero of=/tmp/file1 bs=1G count=1 oflag=dsync #测试写速度
+# oflag=dsync:用同步I/O,用该选项能够去除caching的影响，呈现精准的结果。
+$ dd if=/dev/zero of=/tmp/file2 bs=512 count=1000 oflag=dsync  
+# 测试服务器延迟
+【总结三】使用dd命令清除缓存，精确测试读取速度:
+$ flush
+$ echo 3 | sudo tee /proc/sys/vm/drop_caches     # 清缓存
+$ time dd if=/path/to/bigfile of=/dev/null bs=8k
+
+【hdparm命令】
+ 
+【实例 | 技巧】
+hdparm /dev/sda                   # 显示硬盘的相关信息
+hdparm -t /dev/sda                 # 评估硬盘的读取效率
+hdparm -T /dev/sda                 # 测试硬盘缓存的读取速度
+hdparm -m 4 /dev/sda              # 查询并设置硬盘多重扇区存取的扇区数
+hdparm -tT --direct /dev/sda        # 直接测试硬盘的读性能
+hdparm -cdt /dev/sda              # 查看DMA情况
+hdparm -d 1 /dev/sda              # 开启DMA支持
+【归纳 | 总结】
+【备注一】dd与hdparm:
+(1)	dd命令 ：它被用来在Linux和类Unix系统下对硬盘设备进行写性能的检测。
+(2)	hdparm用来在基于Linux的系统上获取或设置硬盘参数，包括测试读性能以及缓存性能等
+【备注二】检查和收集Linux硬件信息的几个命令:
+	hwinfo 查询硬件信息
+	lsppci  列出PCI总线的信息以及连接到PCI总线上的设备信息
+	lsusb  列出USB总线信息
+	lsblk  列出块设备的信息
+	lsscsi 列出SCSI的设备信息 
+【sync命令】
+ 
+【mkfs命令】
+ 
+【实例 | 技巧】
+mkfs -t ext3 /dev/sda1       # 常用用法，为分区创建文件系统
+mkfs -V -t ext3 -c /dev/sda1  # 并检查坏道，且详细显示
+【归纳 | 总结】
+【备注一】/sbin/mkfs.*文件说明:
+$ ls /sbin/mkfs.*                            # 用来列出本地系统上创建文件系统的程序
+执行mkfs其实是在调用:mkfs.ext3; mkfs.minix; mkfs.ext2 
+$ mkfs.ext3 /dev/sda6                      # 把该设备格式化成ext3文件系统
+【总结一】为新分区创建文件系统的完整步骤:
+假如阵列上插入了新硬盘/dev/sd-70a,为该分区创建文件系统步骤如下:
+$ mkdir -p /mnt/sd-70a                     # 创建挂载目录
+$ chmod 777 /mnt/sd-70a                  # 赋予给定权限
+$ mkfs -t ext3 /dev/sd-70a                  # 创建文件系统
+$ mount /dev/sd-70a /mnt/sd-70a         # 挂载指定目录
+PS: 执行该命令前，用fdisk -l来显示整个系统分区情况
+ 
+【fsck命令】
+ 
+【实例 | 技巧】
+fsck              # 检查在/etc/filesystems文件中所有标记check=true的文件系统
+fsck -p           # 为了检查一个特定的文件系统
+fsck /dev/sda1    # 检查位于 /dev/sda1设备上的文件系统
+fsck -t ext2 -a /dev/sda3  # 检查ext2文档系统/dev/sda3是否正常，如果有异常便自动修复
+fsck -y /dev/sda2         # 检测系统，提示输入yes确认。一般用fdisk -l找到需要修复的设备后
+【归纳 | 总结】
+【备注一】关于mount命令的几点说明:
+(1) 文件系统常见错误一般由下列情形导致:电源失败、硬件失败、或操作错误，例如没有正常关闭系统
+(2) fsck只能运行于未mount的文件系统，不要用于已mount的文件系统
+(3) 修复完成后，会出现提示“FILE SYSTEM WAS MODIFIED”；这时输入reboot命令重启系统即可
+(4) 如果可能，先对故障区域做dd全镜像后再执行fsck命令,比如说: dd if=/dev/sda0 of=/dev/sdb0 
+(5) 执行过程中，有大量inode错误、需要重建树、节点描述文件大小不正确等信息就要中断fsck
+【备注二】mount命令的适用情形及常见症状:
+[主要适用]
+	文件系统：ext2 ext3 reiserfs xfs等
+	范围：提示文件系统需要fsck时，未执行或fsck执行完成
+[常见症状]	
+	无法MOUNT分区
+	大量文件、目录丢失，根目录下生成/LOST+FOUND文件夹，里面有大量#XXXXX类的文件和目录
+	fsck很快报错完成
+	fsck执行时，有大量提示，如修改节点、清0节点等操作
+【fdisk命令】
+ 
+【实例 | 技巧】
+fdisk -l             # 显示当前全部分区
+fdisk -lu            # 显示每块scsi硬盘的分区情况
+fdisk -l  /dev/sda   # 观察实际硬盘使用情形
+fdisk  /dev/sda     # 进入分割硬盘模式
+【归纳 | 总结】
+【备注一】为什么要有多个分区
+(1) 防止数据丢失：如果系统只有一个分区，那么这个分区损坏，用户将会丢失所的有数据
+(2) 增加磁盘空间使用效率：可以用不同的区块大小来格式化分区，如果有很多1K的文件，而硬盘分区区块大小为4K，那么每存储一个文件将会浪费3K空间。这时我们需要取这些文件大小的平均值进行区块大小的划分
+(3) 数据激增到极限不会引起系统挂起：将用户数据和系统数据分开，可以避免用户数据填满整个硬盘，引起的系挂起
+【总结一】添加分区的流程:
+(1) fdisk  /dev/sda  
+p        # 列出当前分区表
+n        # 添加新分区
+回车    # 选择开始的块地址,直接回车默认就可以了
++2G   # 输入要添加分区的大小+200M，+2G这样的都能识别
+回车    # 确定
+w        # 写入并退出
+(2) partprobe                     #  更新当前分区表给内核，否则分区重启才能看到
+(3) mkfs.ext3 /dev/sda4     # 格式化新建分区
+(4) mount /dev/sda4 /mnt/sda4   # 挂载
+PS: 
+(1)如果自己操作错了，千万不要输入w,用q不保存退出!
+(2)t参数可以对分区格式做转换，fd是raid类型,e8是做LVM时用到的pv类型
+
+
+
+5	网络通讯
+【ping命令】
+ 
+【实例 | 技巧】
+ping 192.168.0.1                   # Windows会自动终止，Linux需Ctrl+C来终止
+ping www.sohu.com               # 直接ping主机域名
+ping -c 4 -i  2 -s 1024 192.168.0.1  # ping 4次，间隔2秒，每包大小1K
+【归纳 | 总结】
+【备注一】使用ping检查连通性六个步骤：
+(1) 使用ifconfig观察本地网络设置是否正确
+(2) ping 127.0.0.1来检查本地的TCP/IP协议有没有设置好
+(3) ping本机IP地址，这样是为了检查本机的IP地址是否设置有误
+(4) ping本网网关或本网IP地址来检查硬件设备或者本地网络是否正常
+(5) ping本地DNS地址，这样做是为了检查DNS是否能够将IP正确解析。
+(6) ping远程IP地址，这主要是检查本网或本机与外部的连接是否正常
+【备注二】常见故障信息及原因分析:
+(1) No Answer: 原因可能是，对方主机没工作，双方网络配置不正确，路由问题等。 
+(2) Request Time Out: 对方主机已关机，路由问题或对端防火墙设置禁止ping 
+(3) Unknown Host Name: DNS设置问题，或者对方主机不存在 
+(4) Destination Net Unreachable: 双方没有建立连接，或对方主机不存在 
+(5) Bad IP Address: IP地址不存在或IP不能被DNS服务器解析
+【备注三】Linux下简单的禁ping的方法:
+	echo 1 > /proc/sys/net/ipv4/icmp_echo_ignore_all   # 禁止ping
+	echo 0 > /proc/sys/net/ipv4/icmp_echo_ignore_all   # 开启ping
+PS: 防止DDOS攻击，很多LINUX主机都会禁止ping，ping不通不代表连通有问题
+【备注四】ping命令在shell脚本中的使用实例:
+ 
+【wall命令】
+ 
+【实例 | 技巧】
+wall 'System will shutdown at 21:00 pm'     # 
+wall < bullet.txt                            # 用指定文本来发公告
+echo "hello, everyone!" | wall               # 也可以通过这种方式来发讯息
+wall -g root < message.txt                 # 向整个组用户发信息
+【归纳 | 总结】
+【备注一】wall命令的实现步骤:
+(1) 输入wall 回车
+(2) 输入要发送的讯息内容
+(3) 输入Ctrl+D结束发送
+PS: 如果你正在终端编辑一个文件，那么消息会直接插入到编辑文件中!
+【备注二】wall命令发送信息示例:
+	pts/1这个终端发的信息: (Ctrl+D结束发送)
+ 
+	pts/2终端的用户接收到的信息:
+ 
+【总结一】write, wall, talk区别:
+[共同点]:
+(1) 三者均为Linux自带的聊天通讯工具. 
+(2) 都需要mesg设置为y模式方允许通讯
+(3) 通常都需要用who -T命令来查看当前在线用户情况
+[不同点]:
+(1) write是一对一单向通讯，用于向已登录系统的某个用户发送信息
+(2) wall是一对多单向通讯， wall使用的广播包，不可回复
+(3) talk是一对一双向通讯，Linux真正意思上的聊天工具，目前阵列没有该工具
+【mesg命令】
+ 
+【实例 | 技巧】
+mesg          # 查询当前终端机的写入设置
+mesg y       # 设置终端机可写设置
+mesg n       # 设置终端为不可写
+【归纳 | 总结】
+ 
+
+【talk命令】
+ 
+【实例 | 技巧】
+【场景一】登录在同台服务器上的两个用户
+$ talk Jerry       # 聊天对象
+Hi, Tom!         # 聊天内容 
+Ctrl+C           # 结束聊天   
+$ talk Tom   
+【场景二】登录在不同服务器上的两个用户
+$ talk Jerry@mouse.com  pts/2
+$ talk Tom@cat.com      pts/1
+【netstat命令】
+ 
+【实例 | 技巧】
+netstat -a                                 # 列出所有的端口
+netstat -at                                # 列出所有tcp端口
+netstat -s                                 # 显示网络统计信息
+netstat -lt                                # 显示监听的tcp的端口
+netstat -n                                # 显示所有已建立的有效链接
+netstat -ie                               # 等同于ifconfig
+netstat -apu                             # 显示UDP端口的使用情况
+netstat -nat | grep ESTABLISHED | wc -l   # 当前并发的连接数
+netstat -atulnp | grep mysql             # 查找mysql的端口号
+netstat -lx                              # 列出所有处于监听状态的unix 端口
+netstat -anpt | grep ':80'                 # 找出运行在指定端口的进程
+netstat -ap | grep ssh                    # 找出程序运行的端口
+netstat -nat | grep -i "80" | wc -l          # 查看80端口的连接数
+netstat -n | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}' # 查看并发请求数及其TCP连接
+netstat -np | grep SYN_REC | sort –u   # 列出所有包含的IP地址而不仅仅是计数
+【归纳 | 总结】
+【备注一】netstat常用的几个观察点:
+(1) SYN-SENT：再发送连接请求后等待匹配的连接请求（如果有大量这样的状态包，检查是否中招了）
+(2) SYN-RECEIVED：再收到和发送一个连接请求后等待对方对连接请求的确认（如有大量此状态，估计被flood攻击了）
+(3) LAST-ACK：等待原来的发向远程TCP的连接中断请求的确认（此项出现，检查是否被攻击）
+(4) 对Apache的并发请求数，php或java的进程数(由此来判断系统是否超载，需不需要添加服务)
+【ifconfig命令】
+ 
+【实例 | 技巧】
+【启动关闭网卡】
+ifconfig eth0 up                                  # 启动网卡eth0 
+ifconfig eth0 down                               # 关闭网卡eth0
+【网卡配置和删除IPv6地址】
+ifconfig eth0 add 33ffe:3240:800:1005::2/64        # 为网卡eth0配置IPv6地址
+ifconfig eth0 add 33ffe:3240:800:1005::2/64        # 为网卡eth0删除IPv6地址
+ifconfig eth0 hw ether 00:AA:BB:CC:DD:EE          # 用ifconfig修改MAC地址
+【配置IP地址】
+ifconfig eth0 192.168.120.56                        # 为网卡eth0配置IP地址:192.168.120.56
+ifconfig eth0 192.168.120.56 netmask 255.255.255.0  # 配IP，并加上子掩码
+ifconfig eth0 192.168.120.56 netmask 255.255.255.0 broadcast 192.168.120.255 # 再加广播包
+【启用和关闭ARP协议】
+ifconfig eth0 arp                                   # 开启网卡eth0的arp协议
+ifconfig eth0 -arp                                  # 关闭网卡eth0的arp协议
+【设置最大传输单元】
+ifconfig eth0 mtu 1500                          # 设置能通过的最大数据包大小为1500 bytes
+【归纳 | 总结】
+【备注一】显示网络设备信息说明:
+ 
+Linux下网卡命名规律：eth0，eth1。第一块以太网卡, eth1第二块，依次类推
+lo为环回接口，它的IP地址固定为127.0.0.1，掩码8位。它代表你的机器本身
+第一行：连接类型：Ethernet（以太网）HWaddr（硬件mac地址）
+第二行：网卡的IP地址、子网、掩码
+第三行：UP（代表网卡开启状态）
+RUNNING（代表网卡的网线被接上）
+MULTICAST（支持组播）
+MTU:1500（最大传输单元）：1500字节
+第四、五行：接收、发送数据包情况统计
+第七行：接收、发送数据字节数统计信息
+【备注二】关于ifconfig命令的几点说明:
+(1) 用ifconfig命令配置的网卡信息，在网卡重启后机器重启后，配置就不存在
+(2) service network {start | stop | restart}, 重启network会恢复到原IP
+(3) 要想长久生效，需要修改配置文件;在RHEL系统中，一般在/etc/sysconfig/network-scripts/ifcfg-eth[0-9]
+下面图说明了如何设置该文件: 
+ 
+备注: 上面的只是Linux服务器上修改网卡IP，如果是阵列的话，可以通过下面两种方式来修改:
+	方式一:  CLI模式下执行change system management命令来修改
+	方式二:  DEBUG模式下，在/OSM/script命令os_change*ip.sh来修改
+
+
+6	系统管理
+【useradd命令】
+ 
+【实例 | 技巧】
+useradd Jerry                             # 创建用户Jerry,默认/home/Jerry,/bin/bash
+useradd Jerry -s /sbin/nologin              # 创建用户Jerry，但不能登录系统
+useradd Jerry -u 888                       # 指定UID为888
+useradd -d /usr/Jerry Jerry                   # 指定用户家目录/usr/Jerry
+useradd -c "This is test account" Jerry        # 加注释，方便管理员管理
+useradd -e 2016-06-06 Jerry                 # 将该用户的有效期2016-06-06，逾期不能登录
+useradd -u 1103  -f 7 Jerry                  # 密码无效后，宽限7天
+useradd -s /bin/sh -g root –G admin,test  Jerry     # 用户Jerry,主组root,附加组admin,test
+【归纳 | 总结】
+【备注一】几个跟账号相关的命令:
+	用useradd创建用户帐号
+	用userdel来删除账号
+	用usermod来修改用户账号
+	用passwd设定帐号的密码
+【userdel命令】
+ 
+【实例 | 技巧】
+userdel Jerry        # 仅删除用户账号Jerry
+userdel -r Jerry      # 删除用户账号及相关文件，比如家目录/home/Jerry
+【归纳 | 总结】
+【备注一】关于userdel命令的几点说明:
+(1) 跟账号相关的几个文件:/etc/passwd; /etc/shadow; /etc/group
+(2) 执行-r参数会将用户家目录一并删除，所以删除前最好先备份
+(3) find / -nouser -exec rm - rf {} \;可用来删除无主家目录
+【usermod命令】
+ 
+【实例 | 技巧】
+usermod -u 777 Jerry                               # 更改UID
+usermod -l Tom Jerry                               # 将Jerry该为Tom
+usermod -L Jerry                                   # 锁定账号Jerry
+usermod -U Jerry                                   # 解锁账号Jerry
+usermod -G root Jerry                              # 将Jerry用户添加到root用户组
+usermod -s /bin/ksh -d /usr/tom –g developer tom  # 更改家目录及shell
+【date命令】
+ 
+【实例 | 技巧】
+【设定并显示时间】
+date --date 08:42:00  
+date '+%c' --date 08:45:00
+date –set="20151225 09:17:00”
+【显示时间】
+date              # 输出: Wed Dec 9 10:00:00 CST 2015
+date '+%c'        # 输出: Wed Dec 9 10:00:00 2015
+date -I            # 输出: 2015-12-09
+date '+%D'       # 输出: 12/09/15
+date '+%x'        # 输出: 12/09/15
+date '+%T'        # 输出: 10:00:00
+date '+%X'        # 输出: 10:00:00
+date '+%T%n%D'   # 显示时间后跳行，再显示目前日期
+date '+%B %d'      # December 09
+date -d 'dec 9 -2 weeks'    # 相比12月9日两周前的时间
+date -u                    # 以UTC形式显示日期和时间
+【加减操作】
+date +%Y%m%d                # 显示前天年月日 
+date -d "+1 day" +%Y%m%d    # 显示前一天的日期 
+date -d "-1 day" +%Y%m%d     # 显示后一天的日期 
+date -d "-1 month" +%Y%m%d  # 显示上一月的日期 
+date -d "+1 month" +%Y%m%d  # 显示下一月的日期 
+date -d "-1 year" +%Y%m%d     # 显示前一年的日期 
+date -d "+1 year" +%Y%m%d    # 显示下一年的日期
+date -d '30 days ago'            # 显示30天前日期
+date -d next-month +%Y%m     # 显示距今一个月的时间
+【设定时间】
+date -s            # 设置当前时间，只有root权限才能设置，其他只能查看 
+date -s 20151223  # 设置成20151223，这样会把具体时间设置成空00:00:00 
+date -s 01:01:01   # 设置具体时间，不会对日期做更改 
+date -s "01:01:01 2015-12-23"  # 这样可以设置全部时间 
+date -s "01:01:01 20151223"   # 这样可以设置全部时间 
+date -s "2012-05-23 01:01:01"  # 这样可以设置全部时间 
+date -s "20120523 01:01:01"    # 这样可以设置全部时间
+【其他】
+date -r install.log   # 显示文件最后修改时间
+【归纳 | 总结】
+【备注一】用date度量命令或脚本执行时间举例:
+ 
+【备注二】date在备份文件时的运用:
+ 
+【exit命令】
+ 
+【实例 | 技巧】
+exit                                      # 退出终端，logout命令是注销用户，注意两者区别
+【归纳 | 总结】
+【备注一】关于exit命令的几点说明: 
+(1) 执行exit可使shell以指定的状态值退出。若不设置状态值参数，则以预设值退出
+(2) 状态值0代表执行成功，其他值代表执行失败。
+(3) exit也可用在脚本，离开正在执行的脚本，回到shell
+(4) $?上一个命令的退出码，一般与exit组合使用(exit 0);echo $?;(exit 4);echo $?
+(5) 如无提供退出码，则以最后一个命令执行结果为退出码。比如:exit $?
+【备注二】exit命令与&&,||的组合使用:
+例1:
+ 
+例2:
+ 
+【总结一】exit与logout区别:
+(1) logout 注销用户; exit 退出控制台
+(2) 对于多层shell，用于逐层退出，到最顶层shell，作用就和logout相同。
+(3) 如果没有切换过用户的话，这两个命令都是退出控制台了。 
+(4) 如果切换过用户的话，这两个命令都是注销当前用户，返回上一个用户
+【总结二】exit在Shell脚本中使用:
+ 
+【ps命令】
+ 
+【实例 | 技巧】
+ps -l                        # 列出自己这次登录的PID与相关信息
+ps aux | more                # 列出当前所有正在内存中的进程
+ps -lA | less                  # 显示出所有的进程
+ps aux | egrep "(cron|httpd)"  # 列出与这两个服务相关联的PID
+【归纳 | 总结】
+【总结一】top与ps命令区别:
+	ps主要静态查看系统进程的
+	top则用于动态查看系统进程
+【fuser命令】
+ 
+【实例 | 技巧】
+fuser /OSM/log/cur_debug/messages      # 哪个进程在使用该文件
+fuser -k /OSM/log/cur_debug/messages   # 杀该进程
+fuser -m -u /mnt/usb                     # 查看使用该设备的所有进程
+【归纳 | 总结】
+【备注一】关于fuser命令的几点说明:
+(1) 有时候umount的时候出现device is busy的时候，要用到该命令
+(2) 可以用fuser -k filename来杀进程, 类似于kill -9 进程号
+【top命令】
+ 
+【实例 | 技巧】
+top                   # 查看CPU,内存，进程等使用情况
+top -c                # 显示完整命令
+top -u root           # 仅显示root用户的信息
+top -p  4001         # 按进程号来显示
+top -c -n3 -d4        # 完整显示三次，每次间隔时间4秒
+【归纳 | 总结】
+统计信息区
+ 
+ 
+进程统计区
+ 
+ 
+命令行参数
+ 
+交互式操作
+ 
+【kill命令】
+ 
+【pstree命令】
+ 
+【实例 | 技巧】
+pstree -A | more      # 列出当前系统上所有进程树的关联性
+pstree -Aup | less     # 列出所有进程的关联性，同时显示PID和用户
+【who命令】
+ 
+【实例 | 技巧】
+who            # 简单显示登录系统用户信息
+who am i        # 可轻松获取用户列表， 登录时间， 终端， IP等
+who -b         # 显示系统最后一次启动的时间
+who -r          # 显示初始化进程的运行级别
+who -q         # 用来显示当前登录用户个数
+who -u -H      # 显示空闲进程，并加标题
+【归纳 | 总结】
+【备注一】who命令显示内容解析:
+第一列: 显示用户名称
+第二列: 显示连接方式. tty:用户直接连接到服务器 pts:意味着远程登录
+第三列: 显示登录日期
+第四列: 显示登录时间
+第五列: 显示用户登录的IP地址
+【w命令】
+ 
+【实例 | 技巧】
+w                         # 不带任何参数，最常用的方式
+w -f                       # 切换显示远程主机名
+【归纳 | 总结】
+【备注一】w命令显示内容解析:
+	USER:    登录用户名
+	TTY:      登录后系统分配的终端号
+	FROM:   远程主机名，即从哪里登录的
+	LOGIN@: 何时登录
+	IDLE：    用户空闲时间。这是个计时器，一旦用户执行任何操作，该计时器便会被重置
+	JCPU:     和该终端连接的所有进程占用时间。包括当前正在运行的后台作业占用时间
+	PCPU:    当前进程所占用时间
+	WHAT:   当前正在运行进程的命令行
+【last命令】
+ 
+【实例 | 技巧】
+last                             # 常用用法，不加参数
+last -10                        # 列出最新的10条记录
+last -n 5 -a -i                   # 最后一列显示IP地址
+last -n 8 -f /var/log/btmp       # 该文件更详细，可显示ssh远程登录
+last -n 10 admin                # 显示前10个admin登录的记录
+【归纳 | 总结】
+【备注一】关于last命令的几点说明:
+(1) wtmp,btmp,utmp均为二进制文件，不能用cat查看，可用last打开
+(2) echo > /var/log/wtmp可清空wtmp记录
+【备注二】last命令显示信息解析:
+第一列: 用户名 
+第二列: 终端位置
+1)	pts: 意味着从SSH或TELNET的远程连接用户
+2)	tty: 意味着直接连接到计算机或者本地连接用户
+3)	除了重启，所有状态会在启动时显示
+第三列: 登录IP或者内核
+1)	0.0或者什么都没有的话：意味着用户通过本地终端连接
+2)	重启活动，会显示内核版本
+第四，五、六列: 开始时间 | 结束时间 | 持续时间
+1)	still log in: 还在登录  | down: 直到正常关机 | crash: 直到强制关机
+【扩展 | 引申】
+【引申一】Linux系统的三个主要日志子系统: 
+1. 进程日志(acct/pacct: 记录用户命令)
+2. 错误日志(/var/log/messages:系统级信息；access-log:记录HTTP/WEB的信息)
+3. 连接日志(/var/log/wtmp,/var/log/btmp,/var/run/utmp)
+1) 有关当前登录用户的信息记录在文件utmp中
+2) 登录进入和退出纪录在文件wtmp中
+3) 最后一次登录文件可以用lastlog命令察看
+4) 数据交换、关机和重起也记录在wtmp文件中
+【sleep命令】
+ 
+【实例 | 技巧】
+sleep 5m                        # 休眠5分钟
+date; sleep 30; date              # 显示日期后休眠30秒,再显示日期
+【shutdown命令】
+ 
+【实例 | 技巧】
+shutdown -h now                          #  马上关机
+shutdown -h 30                            # 30分钟后关机
+shutdown -r 10:30 &                        # 10点30分准时重启，并放后台执行
+shutdown +5 "System will be shutdown after 5 minutes"    # 无参默认关机
+shutdown -k now "System will be shutdown"   # 仅告警不关机
+shutdown -rf now                             # 重启时不进行磁盘检测，主要是加快开机速度
+【归纳 | 总结】
+
+【备注一】Linux服务器关机失败可能原因:
+(1) 可能是/sbin目录未加在PATH中, 处理办法  $ export PATH=/sbin:$PATH
+(2) 可能所有者缺少suid的特殊权限, 处理办法  $ chmod u+s /sbin/shutdown
+【总结一】:shutdown, halt, reboot, init, poweroff命令的区别:
+	shutdown: 安全的关机方式，相当于halt + reboot + write三合一
+	halt    : 最简单的关机命令，不用参数;halt其实就是调用shutdown -h。
+	reboot  : 最简单的重启命令，不用参数;工作机制跟halt一样﹐reboot:重启﹐halt:关机
+	init    : 所有进程的祖先，init定义了8个运行级别(runlevel)， init 0为关机;init 6为重启
+	poweroff: 非安全的关机方式，除非确定数据已经保存，不推荐使用
+【总结二】shutdown最后总结:
+【三个用途】:    可用来关机，重启，发送告警信号 
+【三个时间】:    要么马上关机， 要么多少分钟后，要么具体时间点
+【三个关机命令】
+	shutdown -h now  或者 shutdown -h +5 或者 shutdown -h 10:30
+	halt
+	init 0
+【三个重启命令】
+	shutdown -r now 或者 shutdown -r +5 或者 shutdown -r 10:30
+	reboot
+	init 6
+【uptime命令】
+ 
+【实例 | 技巧】
+uptime              # 显示当前时间；启动时间；系统平均负载
+【归纳 | 总结】
+【备注一】数据出处与逻辑CPU个数:
+(1) 平均负载均衡数据取自: $ cat /proc/loadavg
+(2) 查看逻辑CPU个数 $ cat /proc/cpuinfo | grep "core id" | uniq | wc –l
+【总结一】平均负载的参考价值:
+在Linux中，要查看系统1分钟、5分钟、15分钟的系统负载，可以用uptime
+其中15分钟内运行队列中的平均进程数量很有参考意义, 主要看两方面:
+(1) 从1分钟-->5分钟-->15分钟，看这个数字是递增还是递减
+(2) 从15分钟内运行队列的平均进程数，一般必须 < 0.7 * 虚拟内核数
+【iostat命令】
+ 
+【实例 | 技巧】
+iostat -d 1 10       # 查看TPS和吞吐量信息
+iostat -c 1 10       # 查看CPU状态
+iostat -d -x 2 3     # 查看设备使用率(%util), await响应时间
+【归纳 | 总结】
+【备注一】常用参数-c,-d,-x的具体含义:
+ 
+ 
+ 
+【备注二】iostat -x参数使用示例:
+ 
+【扩展 | 引申】
+【引申一】用iostat作IO性能分析注意事项:
+ 
+【uname命令】
+ 
+【实例 | 技巧】
+uname -a           # 显示系统完整信息
+uname -m          #  显示硬件名称(machine)
+uname -n           # 显示网络节点名(nodename)
+uname -r           # 显示内核发行版本(release)
+uname -s           # 显示内核名称
+uname -v           # 显示内核版本
+uname -i           # 显示硬件平台
+uname -o          # 显示操作系统
+uname -p          # 显示处理器类型
+【归纳 | 总结】
+【备注一】关于uname的几点说明:
+(1) 编译内核时，经常用uname -v来查看内核的版本
+(2) 查看主机名既可以用uname -n也可以用hostname命令
+【sudo命令】
+ 
+【实例 | 技巧】
+sudo -u root halt           # 暂时借用root账号管理员权限，执行关机操作
+sudo yum install package   # 也可以不用-u参数，效果跟上面等价
+sudo su - root              # 针对有sudo而无su权限, -表示继承root的环境变量
+【归纳 | 总结】
+【总结一】sudo能做什么
+(1) sudo能够限制指定用户在指定主机上运行某些命令。 
+(2) sudo可以提供日志，记录每个用户使用sudo的行为，并且能将日志传到中心主机 
+(3) sudo为系统管理员提供配置文件，允许系统管理员集中地管理用户的使用权限和使用的主机。它默认的存放位置是/etc/sudoers 
+(4) sudo使用时间戳文件来完成类似“检票”的系统。当用户执行sudo并且输入密码后，用户获得了一张默认存活期为5分钟的"入场券",超时以后，用户必须重新输入密码
+【总结二】visudo的用法:
+sudoers文件就是sudo的配置文件了，不建议直接vi/vim这个文件，建议使用visudo这个命令来编辑这个文件：# visudo 
+原因有二:
+一是它能够防止两个用户同时修改它
+二是它也能进行有限的语法检查
+所以，即使只有你一个超级用户，你也最好用visudo来检查一下语法. 
+如果出现下面的错误提示，则可以选择:
+键入“e”是重新编辑
+键入“x”是不保存退出
+键入“q”是退出并保存。
+如果真选择q，那么sudo将不会再运行，直到错误被纠正
+ 
+【总结三】 sudo与su的区别:
+sodu(super user do), sudo是提升最出色，最安全的方法
+sudo 允许用户借用超级用户的权限，然而"su"命令实际上是允许用户以超级用户登录。所以sudo比su更安全。超级用户root密码应该掌握在少数用户手中，这绝对是真理！并不建议使用sudo或者su来处理日常用途，因为它可能导致严重的错误如果你意外的做错了事，在Linux社区流行一句话："To err is human, but to really foul up everything, you need root password." 翻译过来就是:人非圣贤孰能无过，但是拥有root密码就真的万劫不复了 ubuntu, 就封闭了root用户，都是使用的sudo
+【扩展 | 引申】
+【常见问题一】command not found及处理办法:
+问题现象:
+用$ sudo pip install pil命令来安装python模块，提示command nof foud
+问题原因:
+出于安全考虑，sudo只会获得一个新的，最小化的环境执行，PATH中无路径导致
+$ which pip 查到/usr/local/bin目录下，而该目录一般并不在默认环境中
+处理办法:
+方法一: export PATH=$PATH:/usr/local/bin   # 假如要添加/usr/local/bin目录
+方法二: 打开/etc/sudoers文件，找到"secure_path"一行，添加自己想要的PATH
+【常见问题二】sudo执行的指令很慢原因及其处理办法：
+问题现象:  例如：sudo -u root ls -l /tmp，运行很久才看到结果
+问题原因:  由于/etc/hosts文件中缺失"主机名 <--> IP地址"相互解析条目
+解决方法：
+1）首先运行hostname或uname -n指令，显示当前主机名
+2）然后在/etc/hosts文件中加入一条主机名与IP地址之间的相互解析条目
+$ echo '127.0.0.1 host.localdomain host' >> /etc/hosts
+【常见问题三】常用visudo配置:
+账户名   主机名称=(可切换的身份)   可用的指令
+root ALL=(ALL)	ALL                  # root用户可以在域中任何机器上运行所有用户的所有命令
+test  ALL=(root)  ALL               # 允许test用sudo命令执行root的所有命令
+%testgroup  ALL=(root)  ALL            # 允许整个组用
+test ALL=(root) NOPASSWD: ALL          # 切换时需输入密码,默认必须输入                    
+test localhost=(jerry,tom) /bin/cat, /bin/ls  # test用户可以切换到jerry,tom
+【常见问题四】日志，安全方面配置:
+sudo为安全考虑得很周到，不仅可以记录日志，还能在有必要时向系统管理员报告。
+但是，sudo的日志功能不是自动的，必须由管理员开启。
+这样来做： 
+$ touch /var/log/sudo 
+$ vi /etc/syslog.conf 在syslog.conf最后面加一行（必须用tab分割开）并保存： 
+local2.debug /var/log/sudo 
+重启日志守候进程， $ ps aux | grep syslogd 把得到的syslogd进程的PID(输出的第二列是PID)填入下面： 
+$ kill -HUP PID
+这样sudo就可以写日志了
+【stat命令】
+ 
+【实例 | 技巧】
+stat /etc/passwd           # 展示该文件的详细信息
+stat *                      # 查看该目录下的所有文件及子目录的详细信息
+stat -f /etc/passwd         # 显示文件系统的详细信息
+stat -t /etc/passwd         # 在Shell脚本中很有用，可用cut来处理获得想要的信息
+stat -c "%a" /etc/passwd   # 八进制文件权限，在Shell脚本中有时有用
+【归纳 | 总结】
+【总结一】atime, mtime, ctime:
+(1) 当我们仅仅只是读取文件时，atime改变，而mtime,ctime不会改变,比如执行cat,more命令，但执行ls,stat命令不会修改文件的访问时间
+(2) 当修改文件时，atime，mtime，ctime都会跟着改变.  比如执行vi,touch命令
+(3) 当修改文件属性时，ctime改变，而atime，mtime不变。比如执行chmod,chown命令
+【总结二】用相应的ls命令来查看mtime,ctime,atime属性:
+另个除了可以通过stat来查看文件的mtime,ctime,atime等属性，也可以通过ls命令来查看，具体如下:
+ls -l  filename 列出文件的 mtime （最后修改时间）
+ls -lc filename 列出文件的 ctime （最后更改时间）
+ls -lu filename 列出文件的 atime （最后存取时间）
+【备注一】stat命令使用示例:
+ 
+【lsmod命令】
+ 
+【实例 | 技巧】
+lsmod                # 列出所有载人系统的模块，该信息来源于/proc/modules
+lsmod | grep -i ext3   # 查询当前系统是否加载某些模块
+【归纳 | 总结】
+【备注一】关于模块的几点说明:
+(1) Linux操作系统的核心具有模块化的特性，因此在编译核心时，务须把全部的功能都放入核心。也可以将这些功能编译成一个个单独的模块，待需要时再分别载入.
+(2) Linux老版本会将一些重要的模块加入到内核功能中，这样不利于模块的开发和系统的稳定。现在主要使用模块化的驱动来支持某些功能，在需要某功能的时候，加载该模块
+(3) 动态加载的方式便于驱动程序的调试，同时可以针对产品的功能需求，进行内核的裁剪，将不需要的驱动去除，大大减小了内核的存储容量，可使内核精简，高效.
+【总结一】modinfo,lsmod,insmod,rmmod,modprobe
+(1) 通过modinfo来查看单个模块的详细信息
+(2) 通过lsmod来查看当前系统中已经加载的模块
+(3) 通过insmod来加载模块，老版本常用
+(4) 通过rmmod来卸载模块
+(5) 通过modprobe可以加载，卸载，查看模块信息，新版Linux常用
+【insmod命令】
+ 
+【实例 | 技巧】
+insmod test.ko                                     # 加载当前目录下的模块，使用相对路径
+insmod /lib/modules/2.6. 18-8.el5/kernel/drivers/md/raid1.ko  # 绝对路径
+【归纳 | 总结】
+【备注一】使用insmod模块的几点说明:
+(1)	确保内核版本和内核头文件一致，否则必定会报错:Invalid module format
+$ uname -r
+2.6.28-11-generic
+$ ls /usr/src/
+linux-headers-2.6.28-11 linux-headers-2.6.28-11-generic
+(2)	内核2.4或之前的版本，一般用insmod来加载，2.6之后版本用modprobe
+【rmmod命令】
+ 
+【实例 | 技巧】
+rmmod pppoe                                   # 卸载pppoe模块，记住别带.ko后缀
+rmmod -v pppoe >1.log                          # 卸载模块；并将详细信息输入到1.log里面
+【归纳 | 总结】
+【备注一】与模块相关的几个文件或目录:
+	cat /proc/modules  # 能够显示驱动模块大小、在内核空间中的地址
+	cat /proc/devices   # 只显示驱动的主设备号，且是分类显示 
+	cd /sys/module/   # 下面存防对应驱动的目录，目录下包含驱动的分段信息
+【modinfo命令】
+ 
+【实例 | 技巧】
+modinfo sg                             # 显示sg模块信息
+【modprobe命令】
+ 
+【实例 | 技巧】
+modprobe -v floppy           # 安装软驱模块
+modprobe -v -r floppy         # 卸载软驱模块
+modprobe -l                   # 列出所有已加载模块，相当于lsmod命令
+【归纳 | 总结】
+【备注一】用modprobe卸载，显示，加载模块示例:
+	modprobe raid1         # 加载RAID1阵列级别模块
+	lsmod | grep raid1       # 显示已加载的RAID1阵列级别模块
+	modprobe -r raid1       # 删除RAID1阵列级别模块
+	modprobe -l | grep raid1  # 显示RAID1阵列级别模块
+【free命令】
+ 
+【实例 | 技巧】
+free [-k | -m | -g]             # 以KB,MB,GB的方式显示内存使用情况
+free -t                       # 显示物理内存，交换区间总的使用情况
+free -m -s 2                  # 每隔2秒显示内存输出情况
+watch -n 2 -d free           # 每隔2秒持续监控内存差异的输出情况
+【归纳 | 总结】
+【备注一】free命令相关的几个文件:
+	cat /proc/meminfo    # 显示内存使用情况
+	cat /proc/pid/maps   # 显示当前进程所占用的虚拟地址
+	cat /proc/kcore       # 内存的镜像文件
+total内存 = 插槽中的内存条容量 – 显卡占用的内存
+ 
+【tcpdump命令】
+ 
+【实例 | 技巧】
+tcpdump                                # 显示tcp包信息
+tcpdum -c 10 -q                         # 精简模式下显示10个包
+tcpdump -i bond0                     # 监听某个网卡
+tcpdump udp port 123                # 截取对本机的udp 123端口进行监视的数据包
+tcpdump host 192.168.0.1             # 显示和主机192.168.0.1通信的数据包
+tcpdump -n -i eth0 host 192.168.0.1 and 192.168.0.2    # 截取两台主机之间的数据
+tcpdump -n -i eth0 dst 192.168.0.1 or 192.168.0.2       # 截取进入两台主机的数据
+【截取主机1与主机2或3之间的通信包】
+tcpdump host 192.168.0.1 and /(192.168.0.2 or 192.168.0.3 /)
+【截取主机192.168.0.1除了和主机192.168.0.2之外所有主机通信的ip包】
+tcpdump ip host 192.168.0.1 and ! 192.168.0.2
+【截取主机192.168.0.1接收或发出的telnet包】
+tcpdump tcp port 23 host 192.168.0.1
+【截获除了主机1、2外访问本机http端口的数据包】
+tcpdump -i eth0 host ! 192.168.0.1 and ! 192.168.0.2 and dst port 80
+tcpdump tcp -i eth1 -t -s0 -c 100 and dst port ! 22 and src net 192.168.1.0/24 -w ./target.cap
+(1) ip 、tcp、udp、icmp这些选项等都要放到第一个参数的位置，用来过滤数据报的类型
+(2) -i eth1 : 只抓经过网口eth1的包
+(3) -t : 不显示时间戳
+(4) -s 0 : 抓取数据包时默认抓取长度为68字节。加上-s 0 后可以抓到完整的数据包
+(5) -c 100 : 只抓取100个数据包
+(6) dst port ! 22 : 不抓取目标端口是22的数据包
+(7) src net 192.168.1.0/24 : 数据包的源网络地址为192.168.1.0/24
+(8) -w ./target.cap : 保存成cap文件，方便用wireshark工具进行分析
+【归纳 | 总结】
+【备注一】tcpdump几种常用的参数:
+(1) 抓取回环网口的包：tcpdump -i lo
+(2) 防止包截断：tcpdump -s0
+(3) 以数字显示主机及端口：tcpdump -n
+(4) 生成捕获的包文件，供Wireshink工具分析使用tcpdump -w
+【总结一】tcpdump命令中几种关键字:
+	第一种:类型关键字，包括:host，net，port
+	第二种:传输方向关键字，包括:src , dst  
+	第三种:协议关键字，包括: ip, arp, tcp, udp等类型
+	第四种:其他关键字, 包括:gateway, broadcast, less, greater, not, !, and, &&, or, ||
+【ethtool命令】
+ 
+【实例 | 技巧】
+ethtool eth0                             # 查询eth0网口基本设置, grep Speed可看到网速
+ethtool -i eth0                                  # 查询eth0网口的相关信息, 网卡驱动等信息
+ethtool -d eth0                                 # 查询eth0网口注册信息
+ethtool -r eth0                                  # 重置eth0网口到自适应模式
+ethtool -S eth0                                  # 查询eth0网口收发包统计, 收发包是否出错
+ethtool -s eth0 speed 10 duplex full autoneg on  # 设置网口速率10M、全双工、自协商
+ethtool -s eth1 autoneg off;ethtool eth1          # 关闭网卡的自动协商并且查看修改结果
+ethtool -t eth0 [offline|online]                    # 适配器在线或离线自测试
+ethtool -p eth0                       # 查看相应设备名称对应的设备位置，通过灯闪烁来定位
+【归纳 | 总结】
+【备注一】关于ethtool命令的几点说明:
+(1) Linux系统将检测到的第一块以太网卡命名为eth0, 第二块为eth1
+(2) 用ethtool -K eth0 rx off关闭网卡对收到的数据包的校验功能
+(3) 用ethtool -k eth0查看校验功能是否已被停止
+(4) 用ethtool -p eth0 600查看eth0对应那块网卡,600即10分钟
+(5) 用ethtool命令对网卡进行设置只在当前Shell有效，要长久有效必须修改配置
+【备注二】如何使ethtool设置永久保存在网络设备中
+ 	解决方法一: 
+ethtool设置可通过/etc/sysconfig/network-scripts/ifcfg-ethX文件保存,从而在设备下次启动时激活选项。 例如：ethtool -s eth0 speed 100 duplex full autoneg off
+此指令将eth0设备设置为全双工自适应，速度为100Mbs。若要eth0启动时设置这些参数, 修改文件/etc/sysconfig/network-scripts/ifcfg-eth0, 添加如下一行: 
+ETHTOOL_OPTS="speed 100 duplex full autoneg off"
+ 	解决方法二: 
+将ethtool设置写入/etc/rc.d/rc.local之中
+【jobs命令】
+ 
+【实例 | 技巧】
+【Ctrl+Z】假如我们终端执行watch -n 30 ./test.sh(每30秒执行一次test.sh脚本)，按Ctrl+Z
+ 
+【bg】执行bg %作业号，让作业1在后台执行
+ 
+【fg】执行fg %作业号，将作业从后台调到前台执行
+ 
+【jobs】执行jobs -l命令，列出当前作业号
+ 
+【kill】执行kill -9 %作业号，可以终结当前的作业
+ 
+【&】将当前的作业调到后台执行，使当前的终端可以执行其他任务
+ 
+【nohup】用&命令可放后台执行，但当前的终端logout之后，该作业也会终止，要想让任务始终不挂起的话，就要用到nohup，一般和&组合使用. 它会忽略输出但会将输出添加到nohup.out文件中;
+ 
+【id命令】
+ 
+【实例 | 技巧】
+id                # 显示当前用户信息(打印用户名，UID和该用户属于的所有组)
+id -g            # 只输出有效组的组ID即， GID
+id -G            # 输出所有不同的组ID(有效的，真实和补充的)
+id admin        # 显示特定用户的信息
+【归纳 | 总结】
+【备注一】关于id命令的几点说明:
+(1) 如果想知道某个用户的UID和GID，那么这个命令非常有用，而不需在/etc/group搜寻
+(2) Shell脚本经常判断是否是root账号和普通账号,看是否要做sudo或权限操作, root账号的ID为0.
+(3) 1-499为系统服务或软件厂商自定义ID， 普通用户UID从500开始依次递增
+(4) GID的值从/etc/group文件中读取，UID则从/etc/passwd读取
+(5) root   :x   :0  :0  :root    :/root  :/bin/bash
+   用户名 :密码:UID:GID:用户描述:家目录:登录SHELL
+【history命令】
+ 
+【实例 | 技巧】
+history                      # 常用用法，显示历史命令
+history 200 | more           # 以分页方式显示前200条命令，一般会输出1000条
+history | tail -3              # 显示最后3条命令
+!!                           # 执行上一条命令
+!980                        # 执行history显示的第980条命令
+!top                        # 执行最后一条命令以top开头的命令
+!-1                         # 执行最后一条命令
+!?os_setup?                 # 执行包含os_setup的命令
+history -c                   # 清除目前shell中所有历史命令
+history -w                  # 一般不包含当前会话，除非强制将当前命令写入~/.bash_history
+history -w & cp ~/.bash_history history.txt  # 保留在另一个文件中
+【归纳 | 总结】
+【备注一】历史命令的调用方法：
+	使用上、下箭头调用
+	使用“！n”重复执行第n条历史命令
+	使用“!！”重复执行上一条历史命令
+	使用Ctrl+P 快捷键并回车执行
+	使用 “！字符串”重复执行最后一条以该字串开头的命令
+
+
+7	系统设置
+【passwd命令】
+ 
+【实例 | 技巧】
+passwd                        # 不带用户名的话，则为更改root本身的密码
+passwd guest                  # 更改guest账号的密码
+passwd -x 100 -n 30  admin    # 设置密码的最小与最大有效天数
+passwd -x 100 -n 30  admin    # 设置密码的最小与最大有效天数
+passwd admin -w 7             # admin密码生效前7天告警
+passwd -i 10 test               # 设置test账号密码过期10天后，账户失效
+passwd -d test                  # 则为删除test账号的密码
+passwd -l test                   # 锁住test账号
+passwd -S admin                # 显示账户状态信息，注: 阵列passwd无该参数
+passwd -aS                     # 显示所有用户的密码信息，一般与-S一起使用
+【归纳 | 总结】
+【备注一】-S状态说明: 
+root NP 06/19/2013 0 99999 7 -1
+显示账户状态信息，共有7个字段，分别是登录名、L（P or NP）、上次修改时间、最小年龄、最大年龄、警告期、inactive period。这些ages的单位都是天
+【备注二】与用户、组账户信息相关的文件:
+	存放用户信息： /etc/passwd /etc/shadow
+	存放组信息  ： /etc/group  /etc/gshadow
+	用户信息分析; 例如: admin:x:0:0:root:/home/permitdir/:/bin/bash 
+	用户名|密码|用户id|所在组|组描述|用户家目录|用户缺省Shell
+【clear命令】
+ 
+【实例 | 技巧】
+clear                       # 清空终端屏幕
+【归纳 | 总结】
+【备注一】关于clear命令的几点说明:
+	Linu下的clear与DOS下cls命令区别，前者只是向后翻屏，后者是真正清屏
+	Ctrl+L同样可以清屏，用vi编辑文件时，如果界面布局混乱，用该命令非常有效
+	用printf "\033c" 或者 printf "\ec", 可以达到真正清屏的目的
+	reset也可以真正清空屏幕,在终端错乱,输入字符不在光标位置，用该命令非常有用
+	clear保留历史，reset不保留历史
+【yum命令】
+ 
+【实例 | 技巧】
+【安装包】 
+yum install                  # 全部安装 
+yum install package1        # 安装指定的安装包package1 
+yum groupinsall group1      # 安装程序组group1
+【更新包】
+yum update                  # 全部更新 
+yum update package1         # 更新指定程序包package1 
+yum check-update            # 检查可更新的程序 
+yum upgrade package1        # 升级指定程序包package1 
+yum groupupdate group1      # 升级程序组group1
+【查找包】
+yum info package1           # 显示安装包信息package1 
+yum list                      # 显示所有已经安装和可以安装的程序包 
+yum list package1            # 显示指定程序包安装情况package1 
+yum groupinfo group1        # 显示程序组group1信息
+yum search string             # 根据关键字string查找安装包
+【删除包】
+yum remove | erase package1    # 删除程序包package1 
+yum groupremove group1       # 删除程序组group1 
+yum deplist package1            # 查看程序package1依赖情况
+【清缓存】 
+yum clean packages             # 清除缓存目录下的软件包 
+yum clean headers              # 清除缓存目录下的 
+headers yum clean oldheaders   # 清除缓存目录下旧的 headers
+【归纳 | 总结】
+【备注一】关于yum命令的几点说明:
+(1)	yum提供了查找、安装、删除某一个、一组甚至全部软件包的命令，命令简洁好记
+(2)	yum基於RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软体包，无须繁琐地一次次下载、安装
+【ulimit命令】
+ 
+【实例 | 技巧】
+ulimit -Hs 64         # 限制硬资源，线程栈大小为64K
+ulimit -Sn 32         # 限制软资源，32个文件描述符
+ulimit -a             # 显示当前所有的limit信息
+ulimit -c unlimited   # 对生成的core文件的大小不进行限制
+ulimit -d unlimited   # 对进程的数据段大小不进行限制
+ulimit -f 2048        # 限制进程可以创建的最大文件大小为2048 blocks
+ulimit -l 32           # 限制最大可加锁内存大小为32 Kbytes
+ulimit -m unlimited   # 对最大内存不进行限制
+ulimit -n 128         # 限制最大可以使用128个文件描述符
+ulimit -p 512         # 限制管道缓冲区的大小为512 Kbytes
+ulimit -s 512         # 限制线程栈的大小为512 Kbytes
+ulimit -t unlimited    # 对最大的CPU占用时间不进行限制
+ulimit -u 64          # 限制用户最多可以使用64个进程
+ulimit -v 200000      # 限制最大可用的虚拟内存为200000 Kbytes
+【归纳 | 总结】
+【备注一】为什么要用ulimit来限制资源
+假如一台Linux主机上同时登陆了10个人，在系统资源无限制的情况下，这10个用户同时打开了500 个文档，而假设每个文档的大小有 10M，这时系统的内存资源就会受到巨大的挑战。
+
+而实际应用的环境要比这种假设复杂的多，例如在一个嵌入式开发环境中，各方面的资源都是非常紧缺的，对于开启文件描述符的数量，分配堆栈的大小，CPU 时间，虚拟内存大小，等等，都有非常严格的要求。资源的合理限制和分配，不仅仅是保证系统可用性的必要条件，也与系统上软件运行的性能有着密不可分的联 系。这时ulimit可以起到很大的作用，它是一种简单并且有效的实现资源限制的方式
+【备注二】ulimit命令可作以下方面的限制和优化:
+ulimit用于限制shell启动进程所占用的资源，支持以下各种类型的限制：
+	所创建的内核文件的大小
+	进程数据块的大小
+	Shell进程创建文件的大小
+	内存锁的大小
+	常驻内存集的大小
+	打开文件描述符的数量
+	分配堆栈的最大大小
+	CPU 时间
+	单个用户的最大线程数
+	Shell进程所能使用的最大虚拟内存
+	硬资源和软资源的限制
+Ps:  ulimit只对登录的shell会话生效，要长久生效必须修改配置文件
+【chkconfig命令】
+ 
+【实例 | 技巧】
+chkconfig telnet on           # 开启Telnet服务
+chkconfig telnet off           # 关闭telnet服务
+chkconfig --add httpd           # 增加httpd服务
+chkconfig --del httpd            # 删除httpd服务
+chkconfig --level httpd 235 on   # 设置httpd在运行级别为2、3、5的情况下都是开启的状态
+chkconfig --list                  # 列出系统所有的服务启动情况
+chkconfig --list mysqld          # 列出mysqld服务设置情况
+chkconfig mysqld on            # 设定mysqld在各等级(2、3、4、5)都为开启状态
+【归纳 | 总结】
+【备注一】几个常用运行等级意义:
+	等级0表示： 表示关机
+	等级1表示： 单用户模式
+	等级2表示： 无网络连接的多用户命令行模式
+	等级3表示： 有网络连接的多用户命令行模式
+	等级4表示： 不可用
+	等级5表示： 带图形界面的多用户模式
+	等级6表示： 重新启动
+Ps. 运行等级0和6代表关机和重启，一般服务不运行在该级别
+【备注二】如何增加一个服务：
+(1) 将服务脚本存放在/etc/ini.d/目录下
+(2) chkconfig --add servicename
+(3) chkconfig --level 235 servicename on
+【备注三】关于init文件说明:
+每个被chkconfig管理的服务需要在对应的init.d下的脚本加上两行或者更多行的注释。
+第一行告诉chkconfig缺省启动的运行级以及启动和停止的优先级。如果某服务缺省不在任何运行级启动，那么使用 - 代替运行级。
+第二行对服务进行描述，可以用\ 跨行注释。
+例如，random.init包含三行：
+# chkconfig: 2345 20 80
+# description: Saves and restores system entropy pool for \
+# higher quality random number generation.
+【set命令】
+ 
+【实例 | 技巧】
+set                                # 显示环境变量
+set -o                              # 查看当前设置情况
+set -o vi                           # 打开vi选项
+set +o vi                           # 关闭vi选项
+set PATH="/bin:/usr/bin:/usr/sbin"  # 直接设置变量
+【归纳 | 总结】
+【备注一】vi中的常用set项:
+	:set ai                  # 让vi自动对齐
+	:set noai               # 取消自动对齐
+	:set showmatch        # 高亮显示
+	:set noshowmatch      # 不高亮显示
+	:syntax on             # 开启语法高亮显示
+【time命令】
+ 
+【实例 | 技巧】
+time date                                   # 最常用的用法，直接+命令和参数
+time find / -name "job.sh"                   # 评估find命令的执行时间
+{ time find . -name "mysql.sh"; } 2>result.txt  # shell关键字重定向方式
+【归纳 | 总结】
+【备注一】real, user, sys三者解读:
+(1) real: 代表的是程序从开始到结束的全部时间，即使程序不占CPU也统计时间。而user+sys是程序占用CPU的总时间，因此real>user+sys.
+(2) user:代码借助操作系统底层API来访问硬件或者内存所消耗CPU时间
+(3) sys:有权限访问操作系统最底层的内存，CPU所消耗的CPU时间
+【备注二】time与/usr/bin/time区别:
+(1) 两者都可以测试程序运行时间
+(2) 前者是Shell的关键字，精度可达10毫秒
+(3) 后者精度略低，但能提供丰富的参数选项，包括制定输出文件等功能
+(4) 后者输出文件示例: $ /usr/bin/time -o outfile ls
+(5) 后者输出格式示例: $ /usr/bin/time -f "time: %U" ls
+【总结一】以time为例说明shell关键字如何重定向输出:
+time的输出信息是打印在标准错误输出上的; time的输出信息重定向到文件里面，因为time是shell的关键字，shell做了特殊处理，它会把time命令后面的命令行作为一个整体来进行处理，在重定向时，实际上是针对后面的命令来的，time命令本身的输出并不会被重定向的。处理办法:
+方法一:  $ (time find . -name "*.sh") 2>result.txt     # 通过子shell的方式来重定向
+方法二:  $ { time find . -name "*.sh"; } 2>result.txt   # 通过{}的方式来重定向
+【alias命令】
+ 
+【实例 | 技巧】
+alias                          # 列出当前所有的别名设置
+alias rm='rm -i'                # 增加别名有提示的删除，更安全些
+alias ll='ls -lart --color=auto'   # 设置别名
+unalias ll                      # 用unalias来删除别名
+【归纳 | 总结】
+【备注一】关于alias命令的几点说明:
+(1) 必须用单引号来将原来的命令引起来，防止特殊字符导致错误
+(2) 需要注意别名和其他命令冲突的情况或安全方面的情况
+示例如下:
+ 
+【扩展 | 引申】
+【引申一】alias在全局或是有环境中的配置:
+(1) alias操作仅在当前的shell有效，要想永久生效，必须在profile或bashrc设置
+(2) /etc/profile，/etc/bashrc 是系统全局环境变量设定
+ ~/.profile，~/.bashrc用户家目录下的私有环境变量设定
+(3)	修改完后，用source /etc/profile使修改后配置生效，建议在私有环境变量中设定
+【引申二】设置函数的方式起到别名的作用:
+ 
+【declare命令】
+ 
+【实例 | 技巧】
+declare -i X; X=6/3; echo $X                        # 定义变量可为表达式
+declare -f                                         # 不加函数名的话，会显示所有函数体
+declare -i VAR=1                                  # 声明整形变量并赋值
+declare -x VAR1=10                               # 相当于export，其他shell也可使用该变量
+declare -r VAR                                    # 设置为只读
+declare +i VAR                                    # 取消设置变量VAR属性
+【声明数组变量方式一】
+declare -a A=(1 2 3 )
+echo ${A[*]}
+echo ${A[0]}
+【声明数组变量方式二】
+declare -a citys='([0]="CD" [1]="BJ" [2]="SH")'    
+echo ${citys[1]}                                # 显示变量内容，输出:BJ
+echo ${citys[@]}                               # 显示整个数组变量内容,输出:CD BJ SH
+【声明数组变量方式三】
+declare -a names
+names[0]=Jerry; names[1]=Alice; names[2]=David
+echo ${#names[*]}
+echo ${names[@]}
+echo ${#names[@]}
+【归纳 | 总结】
+【总结一】Shell中常用的内置命令:
+alias, bg, bind, break, builtin, cd, command, comp, gen, complete, continue, declare, dirs, disown, echo, enable, eval, exec, exit, export, fc, fg, getopts, hash, help, history, jobs, kill, let, local, logout, popd, printf, pushd, pwd, read, readonly, return, set, shift, shopt, source, suspend, test, times, trap, type, typeset, ulimit, umask, unalias, unset, wait
+【总结二】Linux的本地变量和环境变量:
+(1) 本地变量和环境变量(全局变量)
+(2) 本地变量我们可以用export或declare来赋值，用法如下:
+export 变量名=值  例如: export total=50
+declare -x 变量名=值 例如: declare -x total=50
+(3) 用set命令查看系统当前的所有的变量
+(4) 用env命令可以查看当前系统的所有环境变量
+(5) 用export命令查看当前系统的所有本地变量
+【export命令】
+ 
+【实例 | 技巧】
+export -p                                  # 列出当前Shell的变量值
+export WEEK=7                            # 定义环境变量并赋值
+export $PATH=$PATH:/usr/bin              # 用来设置路径变量，对所有子shell生效
+export -n WEEK; echo $WEEK               # 实际上未删除，只是不显示而已
+【归纳 | 总结】
+【备注一】关于export的几点说明:
+(1) export设置存放于内存，只能应用在bash环境下，csh应用不了
+(2) export可增删，修改环境变量，供后续执行的程序使用，仅作用于该次登陆操作
+(3) 要想长久生效，必须修改/etc/profile文件，然后执行source /etc/profile命令
+【总结一】几个常用的配置文件说明:
+	/etc/environment是设置整个系统的环境，与登陆用户无关
+	/etc/profile是设置所有用户的环境，与登录用户有关
+	/etc/bashrc:为每一个运行bash shell的用户执行此文件.当bash shell被打开时,该文件被读取.
+	~/.bash_profile:每个用户都可使用该文件输入专用于自己使用的shell信息
+	~/.bashrc:该文件为用户bash shell的bash信息,当登录时以及每次打开新的shell时,该文件被读取.
+	~/.bash_logout:当每次退出系统时,执行该文件
+【dmesg命令】
+ 
+【实例 | 技巧】
+dmesg -c                    # 信息就清空了
+dmesg | less                 # 以分页的方式来显示开机信息
+dmesg | tail -20              # 查看开机的尾部后20条信息
+dmesg | grep -i sda          # 显示被系统检测到的硬盘设备,TTY,USB,memory,dma等
+watch "dmesg | tail -20"      # 实时监控dmesg的日志输出
+【归纳 | 总结】
+【备注一】dmesg命令的几点说明:
+	该命令用来探测系统内核模块加载情况, 比如: $ dmesg | grep acpi
+	该命令用来查看硬件的检测信息或者断开、连接的信息
+	该命令用来获得诸如系统架构、cpu、挂载的硬件，RAM等大量的系统信息
+【enable命令】
+ 【实例 | 技巧】
+enable                          # 显示shell内建命令
+enable -n  type                 # 关闭内部命令type
+enable -a type                  #  开启内部命令type
+【归纳 | 总结】
+【备注一】内部命令和外部命令：
+	内部命令在系统启动时就调入内存，是常驻内存的，所以执行效率高
+	外部命令是系统的软件功能，用户需要时才从硬盘中读入内存
+【备注二】关于enable命令的几点说明:
+	用enable -all来显示所有激活或关闭的指令
+	用enable -n COMMAND来关闭shell内建指令
+	用enable -a COMMAND来激活shell内建指令
+【at命令】
+ 
+【实例 | 技巧】
+at -l                                         # 等同于atq，显示当前作业号
+at -c 8                                       # 8为具体的job号   
+at 8pm tomorrow -v -f /script/job.sh          # 明天下午8点执行脚本
+atrm job 3                                   # 删除job为3的进程
+at 23:59 12/31/1999 echo 'the end of world !'  # 某个时间点执行某个命令
+【归纳 | 总结】
+【备注一】如果atd服务没起来，处理步骤: 
+(1) ps -ef | grep atd | grep -v "grep"  查看是否该进程启动
+(2) /etc/init.d/atd start  若无，则用该命令启动atd服务	
+(3) chkconfig --level 2345 atd on 也可进一步设置开机即启动
+【备注二】at命令常用的两种情形:
+	凌晨三点执行某个命令   at 03:00 <Enter>      <EOT>是输入Ctrl+D来结束任务设置
+ 
+	凌晨三点执行某个脚本
+ 
+【总结一】 常用时间格式
+HH:MM                                         at 21:00
+HH:MM YYYY-MM-DD                           at 21:00 2015-11-30
+HH:MM[am|pm] [Month] [Date]                   at 09pm May 1
+HH:MM[am|pm]+数字[minutes|hours|days|weeks]  at 21:15 + 5 minutes
+绝对时间：HH:MM     DD.MM.YY , MM/DD/YY, YYYY-MM-DD
+相对时间：now+#单位，例如: $ now + 5 days
+模糊时间：noon(12:00PM)，midnight(12:00AM)，teatime(4:00PM)
+【总结二】配置文件/etc/at.deny和/etc/at.allow
+	如果deny单独存在，则是deny以外的所有用户都可以使用at命令
+	如果allow单独存在，则是只允许allow内的用户可以使用at命令
+	如果同时存在，则只允许allow内的用户使用at命令
+	如果同时不存在，则只允许root账号执行at操作
+【hwclock命令】
+ 
+【实例 | 技巧】
+hwclock            # 显示当前时间，即硬件时钟。等价于hwclock -r
+hwclock -w        # 将系统时钟同步到硬件时钟
+hwclock -s         # 将硬件时钟同步到系统时钟
+【归纳 | 总结】
+【总结一】硬件时钟和系统时钟:
+(1) Linux中有硬件时钟与系统时钟两种时钟,它们之间存在差异
+(2) 硬件时钟是指主机板上的时钟设备，可在BIOS画面设定的时钟。
+(3) 系统时钟是指kernel中的时钟; 当Linux启动时，系统时钟会去读取硬件时钟的设定，之后系统时钟即独立运作.所有Linux命令与函数都是读取系统时钟的设定。
+(4) hwclock既可以将硬件时钟同步到系统时钟，也可以将系统时钟同步到硬件时钟
+【eval命令】
+ 
+【实例 | 技巧】
+eval pwd; ls -lart                     # 连接多个命令, 用分号间隔
+var="id | cut -d'  ' -f1"; eval $var     # 对|等特殊字符进行处理
+【归纳 | 总结】
+【备注一】命令优先级表:
+	别名
+	关键字
+	函数
+	内置命令
+	脚本或可执行程序($PATH)
+【备注二】eval命令的几点说明:
+(1) 执行大括号扩展，例如a{b,c}变成ab ac
+(2) 如果~位于单词开头，用$HOME替换~。使用usr的主目录替换~user
+(3) 对任何以符号$开头的表达式执行参数(变量)替换
+(4) 对形式$(string)的表达式进行命令替换;这里是嵌套的命令行处理
+(5) 计算形式为$((string))的算术表达式
+【总结一】eval命令的执行步骤和应用场景:
+执行步骤1: 第一次，执行变量替换
+执行步骤2: 第二次，执行替换后的命令串 
+应用场景1: 命令行结束符（；｜ &）
+应用场景2: 重定向符（< >> >）
+应用场景3: '', "", ()
+【echo命令】
+ 
+【实例 | 技巧】
+echo "Hello World"                           # 显示普通字符串，等价于$ echo Hello World
+echo "\"Hello World\""                         # 显示转义字符
+echo "Today's date time is : `date`"              # 显示命令执行结果
+echo -e "Hello\nWorld"                         # -e开启转义, \n换行，如果是\c则是不换行
+echo -n "please input your name: "; read name; echo "Your name is:$name"
+echo "PATH is $PATH"                           # 显示变量
+echo "127.0.0.1 www.test.com test" >> /etc/hosts # 尾部添加内容
+echo hello >&2                                 # shell脚本中常用，调试时防信息干扰
+echo *.sh                                     # 打印指定的文件类型，这个就类似于ls的功能了
+echo -e "\033[31mLinux\033[0m"              # 用-e参数，红色打印输出Linux
+echo -e "\033[1m\033[41mLinux\033[0m"      # 粗体及红色背景打印Linux
+【归纳 | 总结】
+【备注一】常用特殊字符:
+	\a  发出警告声
+	\b  会删除字符间的所有空格 $ echo -e "Tom \b&& \bJerry"
+	\c  不换行，注意区别\n, 有时Shell脚本中需要，比如提示用户输入信息
+	\n  换行
+	\r  回车
+	\t  插入Tab
+	\\  插入反斜杠字符
+【备注二】echo命令使用示例:
+ 
+8	压缩解压
+【tar命令】
+ 
+
+
+
+
+
+
+
+9	速查备忘
+【if条件语句】
+【语法结构】
+ 
+【实例说明】
+例1: 条件判断,依照systemtype依次在mml模式或diagnose模式处理
+ 
+例2: 条件判断, 长命令作为一变量，然后对变量进行判断
+ 
+【case选择语句】
+【语法结构】
+ 
+【实例说明】
+ 
+
+
+【for循环语句】
+【语法结构I】类Python模式
+ 
+【实例说明I】
+例1:  列表内容直接列出来:
+ 
+例2:  列表内容放置在{}中:
+ 
+例3:  列表内容以seq命令产生，10表示步进, 1:起始  100:终止
+ 
+例4:  列表内容以ls获得，本例即解压缩所有*.gz结尾的文件
+ 
+例5:  列表内容为输入的参数，遍历依次获取参数
+ 
+例6:  列表内容为某个目录下的文件
+ 
+【语法结构II】类C模式
+ 
+【实例说明II】
+例1: 用for循环的简单示例
+ 
+例2: 用for循环实现造坏道，踩坏道示例
+ 
+【while循环语句】
+【语法结构】
+ 
+【实例说明】
+例1: while循环的简单示例
+ 
+例2: while循环常用于遍历文件，然后对文件进行处理，比如
+ 
+例3: while循环，实现一直执行下去，或者死循环简单示例
+ 
+
+【输入输出重定向】
+【文件描述符说明列表】
+ 
+
+【全部命令行列表】
+ 
+
+【输入输出流程图】
+STDIN      输入文件
+STDOUT     输出文件
+STDERR     输出错误
+ 
+	如果想屏蔽stdout,stderr, 则重定向到空设备的文件中:
+ 
+【Here Document实例】
+ 
+【几种常用操作符】
+ 
+【常用按键速查表】
+ 
+【Linux启动顺序图】
+下面这张图很直观，详细的说明了从机器启动 读取BIOS读取硬盘信息MBR读取启动信息Grubroot挂载信息挂载 /etc/inittab 再到登陆整个启动流程，顺序
+ 
+【Linux中的设备号】
+ 
+【Shell中参数传递】
+ 
+【Linux中目录结构】
+ 
+
+
+【vi/vim键盘图】
+ 
+
