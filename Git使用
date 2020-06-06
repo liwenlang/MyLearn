@@ -1,5 +1,7 @@
 参考TortoiseGit:   https://blog.csdn.net/h0422856/article/details/51276093
 
+Git游戏学习：https://github.com/pcottle/learnGitBranching
+
 1.使用git bash进行clone
 第一步：在本地文件夹空白处“右击” -> 选择“Git Bash Here” 。
 第二步：执行克隆命令：git clone xxxxxx.git
