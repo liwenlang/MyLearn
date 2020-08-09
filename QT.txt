@@ -1,0 +1,35 @@
+QT概述
+跨平台的C++应用程序开发框架， GUI
+支持GCC和VS
+
+ Qt 来开发 Windows 桌面程序有以下优点：
+简单易学：Qt 封装的很好，几行代码就可以开发出一个简单的客户端，不需要了解 Windows API。
+资料丰富：资料丰富能够成倍降低学习成本，否则你只能去看源码，关于 DirectUI、Htmlayout、aardio 的资料就很少。
+漂亮的界面：Qt 很容易做出漂亮的界面和炫酷的动画，而 MFC、WTL、wxWidgets 比较麻烦。
+独立安装：Qt 程序最终会编译为本地代码，不需要其他库的支撑，而 Java 要安装虚拟机，C# 要安装 .NET Framework。
+跨平台：如果你的程序需要运行在多个平台下，同时又希望降低开发成本，Qt 几乎是必备的。
+
+模块：
+t有相当多的模块，涉及文件读写、XML操作、JSON解析、正则表达式、智能指针、多线程、数据库、网络操作、图片动画显示、多媒体支持和WebKit。Qt5.2 更包含串口、蓝牙、手机卫星定位等功能
+
+核心：
+通信机制：QT 信号和槽  MFC 消息和回调
+界面布局 QiCreator,
+
+Qt开发实例：
+WPS、YY语音、Skype、豆瓣电台、虾米音乐、淘宝助理、千牛、暴雪的战网客户端、VirtualBox、Opera、咪咕音乐、Google地图、Adobe Photoshop Album 等。
+
+下载；
+官网http://download.qt.io/archive/qt/
+镜像：https://mirrors.tuna.tsinghua.edu.cn/qt/archive/qt/5.9/5.9.0/
+右键复制链接，使用迅雷下载
+
+学习教程：
+http://c.biancheng.net/view/3858.html
+
+创建第一个Qt程序，HelloWorld
+
+Qt项目中main主函数及其作用:
+一个app, 一个窗体
+
+
